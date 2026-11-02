@@ -18,6 +18,8 @@ type HistoryCard = {
   body: string;
   scene: SceneName;
   src?: string;
+  // Crédito da foto (obrigatório nas licenças CC BY)
+  credit?: string;
 };
 
 type DataCard = {
@@ -31,7 +33,7 @@ type DataCard = {
 
 type Card = HistoryCard | DataCard;
 
-// Troque `src` por fotos reais (ex.: "/images/1917.jpg" em /public/images)
+// Fotos de domínio público ou CC BY do Wikimedia Commons; `scene` é o desenho de reserva
 const CARDS: Card[] = [
   {
     kind: "history",
@@ -39,6 +41,8 @@ const CARDS: Card[] = [
     title: "Os trabalhadores tomam a palavra",
     body: "A Revolução Russa mostra ao mundo que a ordem econômica não é eterna: ela pode ser disputada por quem trabalha.",
     scene: "crowd",
+    src: "/images/historia/1917-petrogrado-jornadas-de-julho.jpg",
+    credit: "Petrogrado, julho de 1917. Foto: Viktor Bulla, domínio público",
   },
   {
     kind: "history",
@@ -46,6 +50,8 @@ const CARDS: Card[] = [
     title: "O mercado desaba",
     body: "O crash de Nova York arrasta o planeta à Grande Depressão. A saída veio do investimento público, não da mão invisível.",
     scene: "bank",
+    src: "/images/historia/1929-multidao-bolsa-nova-york.jpg",
+    credit: "Multidão diante da Bolsa de Nova York, 24/10/1929. AP, domínio público",
   },
   {
     kind: "history",
@@ -53,6 +59,8 @@ const CARDS: Card[] = [
     title: "Saúde como direito",
     body: "Nasce o NHS britânico: atendimento universal e gratuito, pago por todos, para todos. Prova de que o público funciona.",
     scene: "rails",
+    src: "/images/historia/1948-bevan-nhs.jpg",
+    credit: "Aneurin Bevan no primeiro dia do NHS, 1948. Univ. of Liverpool, CC BY-SA 2.0",
   },
   {
     kind: "data",
@@ -68,6 +76,8 @@ const CARDS: Card[] = [
     title: "O petróleo é nosso",
     body: "Após ampla mobilização popular, nasce a Petrobras: soberania energética como projeto nacional.",
     scene: "factory",
+    src: "/images/historia/1954-vargas-petrobras.jpg",
+    credit: "Getúlio Vargas e Juracy Magalhães, 1º presidente da Petrobras, 1954. Domínio público",
   },
   {
     kind: "history",
@@ -75,6 +85,8 @@ const CARDS: Card[] = [
     title: "A Constituição Cidadã",
     body: "O Brasil inscreve a saúde como direito de todos e dever do Estado. Nasce o SUS, um dos maiores sistemas públicos e universais de saúde do mundo.",
     scene: "constitution",
+    src: "/images/historia/1988-ulysses-constituicao.jpg",
+    credit: "Ulysses Guimarães ergue a Constituição, 1988. Arquivo Agência Brasil, CC BY 3.0 BR",
   },
   {
     kind: "history",
@@ -82,6 +94,8 @@ const CARDS: Card[] = [
     title: "Lucro privado, prejuízo público",
     body: "A crise financeira global termina com governos resgatando bancos com dinheiro público enquanto famílias perdem suas casas.",
     scene: "chart",
+    src: "/images/historia/2008-lehman-brothers.jpg",
+    credit: "Sede do Lehman Brothers no dia da falência, 15/9/2008. Foto: Robert Scoble, CC BY 2.0",
   },
   {
     kind: "data",
@@ -257,12 +271,19 @@ export default function HorizontalScroll() {
                   key={i}
                   className="hs-card group relative flex h-[68svh] w-[82vw] shrink-0 snap-center flex-col border border-paper/15 bg-zinc-950 md:h-[78svh] md:w-[34vw]"
                 >
-                  <DuotoneFrame
-                    scene={card.scene}
-                    src={card.src}
-                    alt={card.title}
-                    className="h-[50%] w-full md:h-[55%]"
-                  />
+                  <div className="relative h-[50%] w-full md:h-[55%]">
+                    <DuotoneFrame
+                      scene={card.scene}
+                      src={card.src}
+                      alt={card.credit ?? card.title}
+                      className="h-full w-full"
+                    />
+                    {card.credit && (
+                      <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent px-3 pb-2 pt-6 font-grotesk text-[9px] uppercase leading-snug tracking-[0.12em] text-paper/70 md:text-[10px]">
+                        {card.credit}
+                      </span>
+                    )}
+                  </div>
                   <div className="relative flex flex-1 flex-col justify-end overflow-hidden p-5 md:p-7">
                     <span className="hs-year text-outline-red pointer-events-none absolute right-2 top-1 font-display text-[28vw] leading-none opacity-60 md:text-[10vw]">
                       {card.year}
