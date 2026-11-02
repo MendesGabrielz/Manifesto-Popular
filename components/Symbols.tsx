@@ -1,4 +1,4 @@
-import { useId, type SVGProps } from "react";
+import type { SVGProps } from "react";
 
 type SymbolProps = SVGProps<SVGSVGElement> & { strokeWidth?: number };
 
@@ -72,16 +72,12 @@ export function RaisedFist({ strokeWidth = 1.5, ...props }: SymbolProps) {
   );
 }
 
-
-// Martelo (coordenadas antes da rotação de -45°): cabeça, encaixe e cabo
-const HAMMER_HEAD = "M68 36 H128 L138 42 V58 L128 64 H68 L62 59 V41 Z";
-const HAMMER_SOCKET = "M93 64 V72 H107 V64";
-const HAMMER_HANDLE = "M94 72 C95 110 95.5 150 95.5 182 Q100 190 104.5 182 C104.5 150 105 110 106 72";
+// Foice e martelo vetorizados a partir do emblema clássico: o contorno
+// da silhueta inteira, com o cabo do martelo cruzando a lâmina.
+const HAMMER_SICKLE =
+  "M140.4 26 L126 16.2 L114 10.2 L102.6 6.4 L117 16.2 L132.1 31.3 L141.1 44.1 L150.2 63.8 L155.5 86.4 L155.5 103 L152.5 114.3 L144.9 127.2 L143.4 127.9 L83 70.6 L111.7 41.1 L70.9 35.8 L24.9 81.9 L47.5 104.5 L70.2 83.4 L126 141.5 L120.8 144.5 L110.9 146.8 L97.4 146.8 L87.5 144.5 L77.7 140 L73.2 137 L66.4 130.2 L61.1 134 L55.8 134 L52.1 137 L48.3 137.8 L45.3 140.8 L40.7 149.1 L35.4 154.4 L18.1 163.4 L11.3 170.2 L7.5 176.3 L6 181.5 L6.8 187.6 L6 189.8 L9 193.6 L20.3 192.9 L30.2 187.6 L37 180 L42.2 168 L46 162.7 L52.1 157.4 L58.9 153.6 L62.6 148.3 L71.7 156.6 L79.2 161.9 L96.6 169.5 L110.2 171.7 L120 171.7 L132.8 169.5 L147.2 163.4 L175.1 192.1 L178.9 193.6 L184.2 193.6 L188 192.1 L192.5 187.6 L194 183.8 L194 178.5 L191 172.5 L165.3 148.3 L174.4 131.7 L178.9 112.8 L178.9 94.7 L175.1 77.3 L170.6 65.3 L160.8 47.9 L151.7 36.6 Z";
 
 export function HammerSickle({ strokeWidth = 1.5, ...props }: SymbolProps) {
-  // Id único por instância para a máscara (o símbolo aparece várias vezes na página)
-  const maskId = `hs-${useId().replace(/[^a-zA-Z0-9_-]/g, "")}`;
-
   return (
     <svg
       viewBox="0 0 200 200"
@@ -93,65 +89,7 @@ export function HammerSickle({ strokeWidth = 1.5, ...props }: SymbolProps) {
       aria-hidden="true"
       {...props}
     >
-      {/* Moldura construtivista */}
-      <circle cx="100" cy="100" r="96" strokeOpacity="0.2" strokeDasharray="1 6" />
-      <circle cx="100" cy="100" r="89" strokeOpacity="0.12" />
-      <g strokeOpacity="0.35">
-        <line x1="100" y1="1" x2="100" y2="9" />
-        <line x1="100" y1="191" x2="100" y2="199" />
-        <line x1="1" y1="100" x2="9" y2="100" />
-        <line x1="191" y1="100" x2="199" y2="100" />
-      </g>
-
-      {/*
-        Orientação do emblema clássico:
-        foice com a ponta no alto à direita, lâmina descendo pela direita e por baixo,
-        cabo no canto inferior esquerdo; martelo com a cabeça no alto à esquerda
-        e o cabo cruzando a lâmina rumo ao canto inferior direito.
-      */}
-      <g transform="translate(8 -6)">
-        {/* Silhueta do martelo recortada da foice: o cabo passa por cima da lâmina */}
-        <mask id={maskId} maskUnits="userSpaceOnUse" x="-60" y="-60" width="320" height="320">
-          <rect x="-60" y="-60" width="320" height="320" fill="white" stroke="none" />
-          <g
-            transform="rotate(-45 100 100)"
-            fill="black"
-            stroke="black"
-            strokeWidth={strokeWidth * 2.5 + 3}
-          >
-            <path d={HAMMER_HEAD} />
-            <path d={`${HAMMER_SOCKET} Z`} />
-            <path d={`${HAMMER_HANDLE} Z`} />
-          </g>
-        </mask>
-
-        {/* Foice */}
-        <g mask={`url(#${maskId})`}>
-          {/* Lâmina + cabo em uma silhueta só, afinando até a ponta */}
-          <path d="M134.6 31.1 A78 78 0 1 1 42.3 154.6 Q29.7 167.8 14.6 177.9 A7 7 0 0 1 6.8 168.7 Q27.7 148.5 51.2 131.4 A66 66 0 1 0 134.6 31.1 Z" />
-          {/* Fio da lâmina */}
-          <path d="M134.6 31.1 A68 68 0 1 1 54.6 139.3" strokeOpacity="0.45" />
-          {/* Anel de metal entre lâmina e cabo */}
-          <path d="M40.6 156 L32.8 146.8 M36 159.9 L28.2 150.7" />
-          <circle cx="34.4" cy="153.4" r="1.6" />
-          {/* Ranhuras da empunhadura */}
-          <path d="M27.7 165.5 L21.3 157.9 M21.5 170.7 L15.1 163.1" strokeOpacity="0.5" />
-        </g>
-
-        {/* Martelo, girado em -45°: cabeça no alto à esquerda */}
-        <g transform="rotate(-45 100 100)">
-          <path d={HAMMER_HEAD} />
-          {/* Face de impacto e lado da pena */}
-          <path d="M72 36 V64 M128 36 V64" strokeOpacity="0.55" />
-          {/* Chanfro central da cabeça */}
-          <path d="M78 50 H122" strokeOpacity="0.3" />
-          <path d={HAMMER_SOCKET} />
-          <path d={HAMMER_HANDLE} />
-          {/* Veio da madeira e anéis da empunhadura */}
-          <path d="M100 80 C98.6 112 101.2 142 100 176" strokeOpacity="0.35" />
-          <path d="M95.5 160 H104.5 M95.5 166 H104.5" strokeOpacity="0.55" />
-        </g>
-      </g>
+      <path d={HAMMER_SICKLE} />
     </svg>
   );
 }
