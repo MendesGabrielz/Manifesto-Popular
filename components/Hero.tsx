@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { ArrowDown } from "lucide-react";
-import Scene from "./Scene";
+import Image from "next/image";
 import { RedStar } from "./Symbols";
 import { BREAKPOINTS, type Conditions } from "@/lib/motion";
 
@@ -98,10 +98,17 @@ export default function Hero() {
       ref={root}
       className="relative isolate flex min-h-svh items-center justify-center overflow-hidden"
     >
-      {/* Fundo: "foto histórica" desfocada e escurecida */}
+      {/* Fundo: marcha da greve geral de 1917 em São Paulo, desfocada e escurecida */}
       <div className="hero-bg absolute inset-0 -z-10">
-        <Scene name="crowd" className="h-full w-full blur-[3px]" />
-        <div className="absolute inset-0 bg-ink/65" />
+        <Image
+          src="/images/historia/hero-greve-1917-bandeiras.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[50%_40%] blur-[2px] contrast-125 grayscale"
+        />
+        <div className="absolute inset-0 bg-ink/70" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-transparent to-ink" />
       </div>
 
@@ -140,6 +147,9 @@ export default function Hero() {
           Riqueza produzida por muitos,
           <br />
           apropriada por poucos.
+        </span>
+        <span className="hidden max-w-[18rem] text-center text-[10px] leading-relaxed tracking-[0.2em] text-paper/40 lg:block">
+          Foto: greve geral de 1917, São Paulo. Domínio público
         </span>
         <a
           href="#manifesto"
