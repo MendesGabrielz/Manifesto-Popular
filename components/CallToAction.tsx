@@ -10,8 +10,8 @@ import { HammerSickle, RaisedFist, RedStar } from "./Symbols";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-// Grupo de WhatsApp do coletivo
-const COLLECTIVE_URL = "https://chat.whatsapp.com/GNJpM4PqzE4JV314OXI525";
+// Canal de WhatsApp do Manifesto Popular
+const COLLECTIVE_URL = "https://whatsapp.com/channel/0029Vb9vd7sAu3aYmf9VDv0A";
 const READING_URL = "https://www.marxists.org/portugues/";
 
 export default function CallToAction() {
