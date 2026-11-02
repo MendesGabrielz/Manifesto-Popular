@@ -43,6 +43,9 @@ A foice e o martelo, a estrela vermelha e o punho erguido. Cada um abre uma pág
 ### Gerador de cartazes
 Qualquer pessoa escreve a sua palavra de ordem, escolhe símbolo e cor e baixa um cartaz quadrado, pronto para o feed. Panfletagem para a era das redes.
 
+### O que você pode fazer hoje
+Cinco passos pequenos: compartilhar o site (com botões para WhatsApp e para copiar o link), conversar com alguém, fazer um cartaz, entrar no canal e levar o assunto para onde a pessoa já está — sindicato, grêmio, associação de bairro.
+
 ### Organize-se
 O chamado final. Ninguém liberta ninguém sozinho.
 
@@ -58,7 +61,7 @@ Criticar não basta. Em páginas próprias (`/projeto`), o site apresenta propos
 4. Política Externa e Soberania Nacional
 5. Democracia e Fortalecimento Institucional
 
-Cada eixo segue a mesma estrutura: diagnóstico, objetivos, propostas, implementação, viabilidade econômica, prazos, indicadores, riscos e referências. A página principal do projeto reúne **a conta**: quanto cada eixo custa e de onde o dinheiro pode vir, inclusive as fontes que já estão comprometidas. Nenhum número entra sem fonte, e quando não há base para uma meta, o texto diz que ela depende de estudos técnicos.
+Cada eixo segue a mesma estrutura: diagnóstico, objetivos, propostas, implementação, viabilidade econômica, prazos, indicadores, riscos e referências. Nenhum número entra sem fonte, e quando não há base para uma meta, o texto diz que ela depende de estudos técnicos.
 
 Os cinco eixos estão publicados. Novos eixos podem entrar como "em construção" até passarem por pesquisa e revisão.
 

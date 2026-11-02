@@ -11,6 +11,7 @@ import Objections from "@/components/Objections";
 import ProjetoTeaser from "@/components/ProjetoTeaser";
 import SymbolsGrid from "@/components/SymbolsGrid";
 import PosterGenerator from "@/components/PosterGenerator";
+import TakeAction from "@/components/TakeAction";
 import CallToAction from "@/components/CallToAction";
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
         <HorizontalScroll />
         <SymbolsGrid />
         <PosterGenerator />
+        <TakeAction />
       </main>
       <CallToAction />
     </>
