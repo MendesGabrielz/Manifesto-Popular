@@ -5,8 +5,7 @@ import { toBlob, toPng } from "html-to-image";
 import { Download, Loader2, Share2 } from "lucide-react";
 import { HammerSickle, RaisedFist, RedStar } from "./Symbols";
 
-// Troque pelo domínio do site quando publicar
-const SITE_DOMAIN = "SEUSITE.COM.BR";
+const SITE_DOMAIN = "MANIFESTOPOPULAR.COM.BR";
 const MAX_CHARS = 60;
 const EXPORT_SIZE = 1080; // px, quadrado do feed do Instagram
 const FILE_NAME = "cartaz-luta.png";

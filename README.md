@@ -1,65 +1,69 @@
-# O Mercado Falhou — O Estado é o Povo
+# Manifesto Popular
 
-Site manifesto em Next.js (App Router) + Tailwind CSS v4 + GSAP/ScrollTrigger + Lenis.
+**O mercado falhou. O Estado é o povo.**
 
-## Rodar
+Manifesto Popular é um site-manifesto em defesa de um Estado forte e contra a concentração de riqueza imposta pelo capital financeiro. Ele junta crítica política, dados públicos verificáveis e linguagem visual de cartaz para mostrar quem paga a conta do sistema e quem lucra com ela.
 
-```bash
-npm install
-npm run dev
-```
+O visual é **neo-construtivista**: preto, vermelho e branco, tipografia gigante, linhas duras e imagens em preto e branco que viram vermelho ao toque. É uma releitura digital dos cartazes de vanguarda do início do século XX.
 
-## Deploy na Vercel
+---
 
-Suba a pasta para um repositório no GitHub e importe em vercel.com/new. Não precisa de configuração extra (framework detectado automaticamente).
+## O que tem no site
 
-## Estrutura
+### O mercado falhou
+A abertura. O título surge letra por letra sobre uma multidão em marcha, com uma estrela vermelha que entra girando em 3D.
 
-| Arquivo | O que faz |
-| --- | --- |
-| `app/layout.tsx` | Fontes (Bebas Neue, Space Grotesk, Inter) e Lenis global via `SmoothScroll` |
-| `components/SmoothScroll.tsx` | Lenis sincronizado com o ticker do GSAP/ScrollTrigger |
-| `components/Hero.tsx` | Título letra por letra (stagger) + parallax no scroll |
-| `components/Manifesto.tsx` | Revelação linha por linha com máscara |
-| `components/CapitalBill.tsx` | "A Fatura do Capital": 4 cards-fatura em scroll horizontal fixado, com contadores, barras, carimbo e skew por velocidade |
-| `components/Marquee.tsx` | Faixas de texto gigante movidas pela rolagem |
-| `components/HorizontalScroll.tsx` | Linha do tempo com scroll horizontal fixado (pin) |
-| `components/SymbolsGrid.tsx` | Grid assimétrico dos 3 símbolos; clique abre o modal |
-| `components/SymbolModal.tsx` | Página interna imersiva: máscara circular (desktop) ou drawer (mobile) |
-| `components/symbolStories.ts` | Textos históricos, linha do tempo e fotos de cada símbolo |
-| `lib/motion.ts` | Breakpoints compartilhados do `gsap.matchMedia()` e acesso ao Lenis |
-| `components/CallToAction.tsx` | Footer "ORGANIZE-SE" com botão magnético |
-| `components/MagneticButton.tsx` | Botão que segue o cursor |
-| `components/Symbols.tsx` | SVGs: estrela, punho, foice e martelo, engrenagem |
-| `components/Scene.tsx` | Placeholders P&B em SVG no lugar de fotos |
+### Manifesto
+O texto central: a produtividade cresce e os salários ficam para trás, a riqueza se esconde em juros e dividendos, e saúde, educação, energia e crédito precisam estar sob controle público. Fecha com três propostas: taxar grandes fortunas, fortalecer os bancos públicos e proteger os setores estratégicos.
 
-## Trocar placeholders por fotos reais
+### A Fatura do Capital
+Quatro "faturas" que cobram do povo o preço do neoliberalismo:
+- **O monopólio bancário:** quatro bancos concentram 57% do crédito, enquanto o rotativo do cartão cobra 438% ao ano.
+- **Privatização e apagão:** o Amapá passou 22 dias no escuro em 2020, e milhões de paulistanos ficaram sem luz em 2023 e 2024.
+- **A fome e a fartura:** a fortuna dos bilionários cresceu 30% na pandemia, enquanto a fome atingiu 33,1 milhões de pessoas em 2022.
+- **A ilusão do livre mercado:** mais de R$ 1 trilhão por ano em juros da dívida pública.
 
-1. Coloque as imagens em `public/images/`.
-2. Em `components/HorizontalScroll.tsx`, adicione `src: "/images/sua-foto.jpg"` ao card.
-3. O filtro P&B e o duotone vermelho no hover são aplicados automaticamente pelo `DuotoneFrame`.
+### Contador ao vivo
+Um número vermelho que não para de subir e mostra quanto o Estado brasileiro transfere em juros para rentistas desde o momento em que a pessoa abriu a página: cerca de R$ 31 mil por segundo.
 
-Para o fundo do Hero, troque `<Scene name="crowd" ... />` em `components/Hero.tsx` por um `<img>` com `object-cover`.
+### Calculadora do abismo social
+A pessoa digita o próprio salário e descobre:
+- quantos anos precisaria trabalhar, sem gastar nada, para juntar o que a fortuna do brasileiro mais rico cresce em um único dia;
+- como uma dívida de R$ 1.000 no cartão dobra em cinco meses.
 
-Fontes de fotos históricas de domínio público: Wikimedia Commons, Biblioteca Nacional Digital, Arquivo Nacional.
+### A Luta
+Uma linha do tempo que a pessoa percorre de lado: a Revolução de 1917, o crash de 1929, o nascimento da saúde pública universal, o petróleo é nosso, a Constituição Cidadã e o SUS, e a crise de 2008. Entre os marcos, dados da Oxfam sobre a desigualdade global.
 
-## Links a configurar
+### Os Símbolos da Luta
+A foice e o martelo, a estrela vermelha e o punho erguido. Cada um abre uma página com a origem histórica do símbolo, linha do tempo e citações.
 
-Em `components/CallToAction.tsx`:
-- `COLLECTIVE_URL`: link do seu coletivo/formulário (hoje é um placeholder `#organize`).
-- `READING_URL`: materiais de leitura (hoje aponta para o Marxists Internet Archive em português).
+### Gerador de cartazes
+Qualquer pessoa escreve a sua palavra de ordem, escolhe símbolo e cor e baixa um cartaz quadrado, pronto para o feed. Panfletagem para a era das redes.
 
-## Dados
+### Organize-se
+O chamado final. Ninguém liberta ninguém sozinho.
 
-Os cards de dados citam relatórios da Oxfam (2023 e 2024). Confira os números nas fontes originais antes de publicar e atualize se houver edições mais recentes.
+---
 
-## Mobile (< 768px)
+## Compromisso com os dados
 
-- A Fatura do Capital vira uma pilha vertical com rolagem normal.
-- A Luta vira um carrossel de arrastar com scroll-snap.
-- A estrela 3D do Hero usa outra "câmera" (perspectiva mais curta, entra tombando em X) e fica centralizada atrás do título.
-- O modal dos símbolos abre como drawer de baixo para cima.
+Crítica forte exige número certo. Todo dado do site foi checado em fonte pública e traz a fonte junto:
 
-## Acessibilidade
+- **Banco Central do Brasil:** concentração bancária, juros do cartão e juros da dívida pública.
+- **IBGE:** insegurança alimentar (PNAD Contínua).
+- **Rede PENSSAN:** inquérito sobre a fome (II VIGISAN).
+- **Oxfam:** relatórios sobre bilionários e desigualdade.
+- **Forbes Brasil:** fortunas dos bilionários brasileiros.
+- **ANEEL e ONS:** apagões no setor elétrico.
 
-Com `prefers-reduced-motion: reduce`, o Lenis e as animações são desativados e a linha do tempo vira rolagem horizontal nativa.
+Quando um dado envelhece, ele é atualizado, e não esticado para caber no discurso.
+
+---
+
+## Feito com
+
+Next.js, React, Tailwind CSS, GSAP e Lenis. As ilustrações e os símbolos são desenhados em código (SVG).
+
+---
+
+*Copie, compartilhe, organize.*
