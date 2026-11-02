@@ -12,7 +12,7 @@ export type SymbolStory = {
   sections: { title: string; body: string }[];
   timeline: { year: string; text: string }[];
   quote?: { text: string; author: string };
-  // Fotos de época: troque `scene` por `src: "/images/..."` com material de arquivo
+  // Fotos de época em domínio público (Wikimedia Commons); `scene` é o desenho de reserva
   photos: { scene: SceneName; src?: string; caption: string }[];
 };
 
@@ -45,9 +45,9 @@ export const STORIES: SymbolStory[] = [
       { year: "1922", text: "Fundação do PCB e da URSS" },
     ],
     photos: [
-      { scene: "factory", caption: "Operários de fábrica, anos 1920 (placeholder)" },
-      { scene: "crowd", caption: "Assembleia de trabalhadores rurais (placeholder)" },
-      { scene: "rails", caption: "Obra ferroviária estatal (placeholder)" },
+      { scene: "factory", src: "/images/historia/greve-1917-comicio-bras.jpg", caption: "Operários em comício no Brás durante a greve geral de 1917, São Paulo. Autor desconhecido, domínio público" },
+      { scene: "crowd", src: "/images/historia/colheita-1909-prokudin-gorskii.jpg", caption: "Camponeses na colheita, Império Russo, 1909. Foto: Serguei Prokudin-Gorskii, domínio público" },
+      { scene: "rails", src: "/images/historia/feno-1909-prokudin-gorskii.jpg", caption: "Trabalhadores rurais no feno, 1909. Foto: Serguei Prokudin-Gorskii, domínio público" },
     ],
   },
   {
@@ -82,9 +82,9 @@ export const STORIES: SymbolStory[] = [
       author: "Marx e Engels, Manifesto Comunista (1848)",
     },
     photos: [
-      { scene: "crowd", caption: "Marcha internacionalista (placeholder)" },
-      { scene: "dam", caption: "Grande obra pública (placeholder)" },
-      { scene: "factory", caption: "Sindicato em assembleia (placeholder)" },
+      { scene: "crowd", src: "/images/historia/greve-1917-bandeiras-vermelhas.jpg", caption: "Trabalhadores com bandeiras vermelhas na greve geral de 1917, São Paulo. Autor desconhecido, domínio público" },
+      { scene: "dam", src: "/images/historia/milicianas-cartagena-1936.jpg", caption: "Milicianas e milicianos antifascistas em Cartagena, Espanha, 1936. Autor desconhecido, domínio público" },
+      { scene: "factory", src: "/images/historia/lenin-putilov-brodsky.jpg", caption: "Isaak Brodsky, Lênin na fábrica Putilov em 1917 (pintura de 1929). Domínio público" },
     ],
   },
   {
@@ -120,9 +120,9 @@ export const STORIES: SymbolStory[] = [
       author: "Palavra de ordem da FRELIMO, Moçambique",
     },
     photos: [
-      { scene: "crowd", caption: "Piquete de greve (placeholder)" },
-      { scene: "factory", caption: "Portão de fábrica, ABC paulista (placeholder)" },
-      { scene: "chart", caption: "Panfleto sindical (placeholder)" },
+      { scene: "crowd", src: "/images/historia/mexico-1968-podio.jpg", caption: "Tommie Smith e John Carlos erguem o punho no pódio olímpico, Cidade do México, 1968. Foto: Angelo Cozzi, domínio público" },
+      { scene: "factory", src: "/images/historia/greve-1917-operarias.jpg", caption: "Operárias em greve a caminho da negociação, São Paulo, 1917. Autor desconhecido, domínio público" },
+      { scene: "chart", src: "/images/historia/greve-1917-repressao.jpg", caption: "Polícia dispersa grevistas em São Paulo, 1917. Autor desconhecido, domínio público" },
     ],
   },
 ];
