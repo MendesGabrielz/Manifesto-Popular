@@ -29,6 +29,8 @@ export type Bar = {
   target: number; // 0 a 100
   currentLabel: string;
   targetLabel: string;
+  // "Meta" por padrão; "Referência" quando o alvo é histórico ou comparativo
+  targetName?: string;
   note: string;
 };
 
@@ -485,6 +487,211 @@ const EDU: AxisContent = {
   ],
 };
 
+const IND: AxisContent = {
+  diagnosis: [
+    "O Brasil se desindustrializou cedo, antes de ficar rico. A indústria de transformação chegou a 35,9% do PIB em 1985; em 2023, era 15,3%. O país passou a vender mais matéria-prima e a comprar de fora mais produtos de alta tecnologia.",
+    "Em 2025, cinco produtos, petróleo bruto, soja, minério de ferro, carne bovina e café, somaram quase 43% de tudo o que o Brasil exportou, e a China comprou 28,7% do total. Commodity ajuda a fechar as contas externas, mas oscila com o preço internacional e gera poucos empregos qualificados.",
+    "A produtividade do trabalho está praticamente parada há mais de uma década: cresceu só 0,1% em 2024, segundo estimativa do FGV IBRE. A informalidade explica mais da metade da queda de produtividade desde 2014, e empresas formais são, em média, cerca de quatro vezes mais produtivas que as informais.",
+    "Investir na produção é caro no Brasil. A taxa Selic chegou a 15% ao ano em 2025, uma das maiores taxas de juros reais do mundo, e o sistema de impostos sobre o consumo, que só agora começa a ser simplificado pela reforma tributária, pune quem produz em várias etapas.",
+    "Enquanto isso, o mundo voltou a fazer política industrial. Os Estados Unidos aprovaram em 2022 leis bilionárias para trazer de volta a fabricação de chips e de tecnologias limpas; China e Coreia do Sul nunca deixaram de fazer. O Brasil retomou em 2024, com a Nova Indústria Brasil, e o desafio agora é dar continuidade e medir resultados.",
+  ],
+  keyNumbers: [
+    { value: "15,3%", label: "do PIB era a indústria de transformação em 2023 (35,9% em 1985)", source: "IBGE, Contas Nacionais / CNI" },
+    { value: "~43%", label: "das exportações vieram de cinco commodities em 2025", source: "MDIC / Secex" },
+    { value: "28,7%", label: "das exportações foram para a China em 2025", source: "MDIC / Secex" },
+    { value: "0,1%", label: "de crescimento da produtividade do trabalho em 2024", source: "FGV IBRE (estimativa)" },
+    { value: "15%", label: "ao ano, a taxa Selic em 2025", source: "Banco Central / Copom" },
+    { value: "R$ 300 bi", label: "em crédito do BNDES para a Nova Indústria Brasil até 2025", source: "BNDES" },
+  ],
+  bars: {
+    title: "De onde viemos e para onde vamos",
+    caption: "A participação de 1985 é uma referência histórica, não uma meta: a economia mudou. A meta de crédito é a do próprio BNDES para a Nova Indústria Brasil.",
+    items: [
+      { label: "Indústria de transformação no PIB (escala até 40%)", current: (15.3 / 40) * 100, target: (35.9 / 40) * 100, currentLabel: "15,3% (2023)", targetLabel: "35,9% em 1985", targetName: "Referência", note: "IBGE, Contas Nacionais; série da CNI a preços correntes" },
+      { label: "Crédito do BNDES para a Nova Indústria Brasil (escala até R$ 400 bi)", current: (300 / 400) * 100, target: (370 / 400) * 100, currentLabel: "R$ 300 bi (até 2025)", targetLabel: "R$ 370 bi até 2026", note: "BNDES" },
+    ],
+  },
+  objectives: [
+    "Reverter a desindustrialização e aumentar o peso da indústria de transformação na economia. A meta numérica deve seguir as metas por missão da Nova Indústria Brasil até 2033 e estudos técnicos.",
+    "Diversificar as exportações, vendendo mais produtos de maior valor agregado e dependendo menos de poucas commodities e de poucos compradores.",
+    "Voltar a crescer a produtividade de forma sustentada, com formalização das empresas e dos trabalhadores.",
+    "Gerar empregos formais e qualificados, com salários acima da média.",
+    "Construir capacidade nacional em setores estratégicos: saúde, energia limpa, minerais críticos, defesa, tecnologias digitais e agroindústria.",
+    "Fortalecer pequenas e médias empresas e integrá-las às cadeias das grandes.",
+    "Aproximar indústria, universidade e pesquisa, em conexão com o eixo de Educação, Ciência e Tecnologia.",
+  ],
+  proposals: [
+    {
+      title: "Política industrial de Estado, com metas e avaliação",
+      description: "Dar continuidade à Nova Indústria Brasil e às suas seis missões, com metas públicas até 2033, avaliação independente periódica e regra clara para cortar o incentivo que não entregar resultado. Política industrial não pode mudar a cada governo.",
+      competence: "União, por meio do Ministério do Desenvolvimento, Indústria, Comércio e Serviços e do Conselho Nacional de Desenvolvimento Industrial",
+      term: "Curto prazo",
+      alternatives: [
+        "Manter a política como programa de governo, revisado a cada mandato.",
+        "Fixar metas, instrumentos e avaliação em lei, dando estabilidade para além dos mandatos.",
+      ],
+    },
+    {
+      title: "Crédito de longo prazo para quem produz e inova",
+      description: "Crédito do BNDES e da Finep com custo menor para investimento produtivo e inovação, sempre com contrapartidas medidas: investimento, emprego, exportação ou pesquisa. Ampliar fundos garantidores para que pequenas empresas tenham acesso.",
+      competence: "União, por meio do BNDES, da Finep e dos fundos garantidores",
+      term: "Curto prazo",
+      alternatives: [
+        "Crédito público direcionado com juros subsidiados para setores e missões prioritárias.",
+        "Incentivos fiscais à inovação nas empresas, com avaliação periódica.",
+        "Fundos garantidores e mercado de capitais (debêntures) para financiar com poupança privada.",
+      ],
+    },
+    {
+      title: "Compras públicas como motor da inovação",
+      description: "Usar o poder de compra do SUS, das Forças Armadas e das obras públicas para desenvolver fornecedores nacionais: margens de preferência permitidas pela Lei de Licitações (14.133/2021), encomendas tecnológicas e parcerias para produção de medicamentos e vacinas no país, com prazo para transferência de tecnologia.",
+      competence: "União, estados e municípios",
+      term: "Médio prazo",
+    },
+    {
+      title: "Setores estratégicos com missão clara",
+      description: "Complexo industrial da saúde, para não repetir a dependência de insumos importados vista na pandemia; transição energética, com fabricação de equipamentos e hidrogênio de baixo carbono; minerais críticos, para processar no país em vez de exportar bruto; defesa e aeroespacial; e tecnologias digitais e semicondutores.",
+      competence: "União, com estados, universidades e empresas",
+      term: "Longo prazo",
+    },
+    {
+      title: "Pequenas e médias empresas no centro",
+      description: "Crédito e garantia em escala, extensão tecnológica com o Senai, o Sebrae e a Embrapii para modernizar processos, e integração das pequenas como fornecedoras de grandes empresas e do poder público, usando a preferência em licitações já prevista no Estatuto da Microempresa (Lei Complementar 123/2006).",
+      competence: "União e estados",
+      term: "Curto prazo",
+    },
+    {
+      title: "Ambiente para produzir",
+      description: "Implementar a reforma tributária do consumo (Emenda Constitucional 132/2023) sem abrir novas exceções, para acabar com o imposto em cascata que pune quem produz. Coordenar a política econômica para reduzir os juros reais e evitar câmbio valorizado demais, que barateia o importado e tira competitividade da indústria nacional.",
+      competence: "União e Congresso Nacional; Banco Central na política de juros",
+      term: "Médio prazo",
+    },
+    {
+      title: "Trabalhadores qualificados para a nova indústria",
+      description: "Ligar o ensino técnico e a requalificação de trabalhadores às missões da política industrial, para que os empregos criados sejam ocupados por brasileiros e não esbarrem na falta de mão de obra.",
+      competence: "União, estados e Sistema S",
+      term: "Médio prazo",
+    },
+  ],
+  implementation: [
+    {
+      title: "Toda ajuda com contrapartida",
+      body: "Crédito barato, incentivo fiscal ou preferência em compras só com metas medidas, como investimento, emprego, exportação e pesquisa, e com prazo de validade. É o que a Coreia do Sul fez nas décadas de 1970 a 1990: apoio do Estado em troca de metas de exportação.",
+    },
+    {
+      title: "Aprender com os erros",
+      body: "Incentivos amplos, sem contrapartida e sem avaliação, como parte das desonerações da década de 2010, foram muito criticados por custar caro e entregar pouco. A nova política precisa de critérios públicos e saída programada.",
+    },
+    {
+      title: "Governança e transparência",
+      body: "O Conselho Nacional de Desenvolvimento Industrial coordena as missões; um painel público mostra quanto cada empresa recebeu e o que entregou.",
+    },
+    {
+      title: "Avaliação independente",
+      body: "Avaliações periódicas por órgãos técnicos, como o IPEA, e controle do Tribunal de Contas da União, com relatórios publicados.",
+    },
+    {
+      title: "Coordenação com a política econômica",
+      body: "Política industrial não funciona com juros reais muito altos e câmbio instável. Ela precisa estar alinhada à política fiscal e monetária, e não competir com elas.",
+    },
+  ],
+  viability: {
+    costs: [
+      "A Nova Indústria Brasil previu R$ 300 bilhões em crédito do BNDES, da Finep e da Embrapii entre 2023 e 2026. Em dezembro de 2025, o BNDES informou ter atingido o valor e anunciou mais R$ 70 bilhões até 2026.",
+      "O custo fiscal de cada incentivo, como juros subsidiados ou impostos que deixam de ser cobrados, depende do desenho e precisa ser estimado e publicado antes da aprovação.",
+      "O custo de cada missão setorial depende de estudos técnicos.",
+    ],
+    funding: [
+      "BNDES, com recursos do FAT e captações próprias.",
+      "Finep, FNDCT e Embrapii para inovação.",
+      "Compras públicas: o Estado já compra; trata-se de usar melhor esse dinheiro.",
+      "Mercado de capitais, com debêntures e fundos de investimento.",
+      "Fundos garantidores para pequenas e médias empresas.",
+    ],
+    limits: [
+      "Juros altos encarecem o crédito e tornam mais caro o subsídio público.",
+      "As regras fiscais limitam a ampliação de gastos e de renúncias de receita.",
+      "Regras de comércio internacional, como as da OMC, restringem alguns instrumentos, como exigências de conteúdo local.",
+    ],
+  },
+  timeline: [
+    {
+      term: "Curto prazo",
+      items: [
+        "Metas e avaliação da política industrial fixadas e publicadas.",
+        "Crédito e garantias ampliados para pequenas e médias empresas.",
+        "Regras da reforma tributária aplicadas sem novas exceções.",
+      ],
+    },
+    {
+      term: "Médio prazo",
+      items: [
+        "Compras públicas usadas para desenvolver fornecedores nacionais.",
+        "Programas de qualificação ligados às missões.",
+        "Primeiras avaliações independentes, com corte do que não funcionar.",
+      ],
+    },
+    {
+      term: "Longo prazo",
+      items: [
+        "Indústria de transformação com peso crescente no PIB.",
+        "Exportações mais diversificadas e com mais tecnologia.",
+        "Capacidade nacional nos setores estratégicos.",
+      ],
+    },
+  ],
+  indicators: [
+    { name: "Indústria de transformação no PIB", current: "15,3% (2023)", target: "Reverter a queda; meta depende de estudos e das metas da NIB", source: "IBGE, Contas Nacionais" },
+    { name: "Concentração das exportações", current: "Cinco commodities somam ~43% (2025)", target: "Reduzir; meta depende de estudos", source: "MDIC / Secex" },
+    { name: "Crescimento da produtividade do trabalho", current: "0,1% (2024, estimativa)", target: "Crescimento sustentado; meta a definir", source: "FGV IBRE, Observatório da Produtividade" },
+    { name: "Crédito para a Nova Indústria Brasil", current: "R$ 300 bi (até 2025)", target: "R$ 370 bi até 2026", source: "BNDES" },
+    { name: "Crédito para micro, pequenas e médias indústrias", current: "R$ 111,8 bi dos R$ 300 bi", target: "Ampliar a fatia; meta a definir", source: "BNDES" },
+    { name: "Investimento em pesquisa e desenvolvimento", current: "1,19% do PIB (2023), metade privado", target: "Acima de 2%, em conexão com o eixo de Ciência", source: "MCTI; CNI" },
+  ],
+  risks: [
+    {
+      title: "Captura por grupos de interesse",
+      body: "Empresas bem conectadas tendem a conseguir benefícios sem entregar resultados. Contrapartidas, transparência e prazo de validade reduzem esse risco.",
+    },
+    {
+      title: "Concentração nas grandes empresas",
+      body: "Dos R$ 300 bilhões do BNDES para a Nova Indústria Brasil, R$ 175,6 bilhões foram para grandes empresas. Sem metas para pequenas e médias, a política reforça quem já é forte.",
+    },
+    {
+      title: "Proteção que encarece",
+      body: "Proteger demais a indústria nacional pode deixar produtos caros e piores para o consumidor. Toda proteção precisa ser temporária e ligada a metas de produtividade.",
+    },
+    {
+      title: "Descontinuidade",
+      body: "Indústria leva anos para amadurecer. Mudanças de rumo a cada governo afastam investimento.",
+    },
+    {
+      title: "Juros e câmbio",
+      body: "Juros reais altos e câmbio instável podem anular o efeito de qualquer política setorial.",
+    },
+    {
+      title: "Regras internacionais",
+      body: "Alguns instrumentos podem ser contestados por outros países na OMC ou em acordos comerciais, o que exige desenho jurídico cuidadoso.",
+    },
+  ],
+  references: [
+    { title: "Constituição da República Federativa do Brasil (arts. 170, 174, 218 e 219)", source: "Presidência da República", year: "1988", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" },
+    { title: "Emenda Constitucional 132/2023, reforma tributária", source: "Presidência da República", year: "2023", url: "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm" },
+    { title: "Lei 14.133/2021, Licitações e Contratos", source: "Presidência da República", year: "2021", url: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm" },
+    { title: "Lei Complementar 123/2006, Estatuto da Microempresa", source: "Presidência da República", year: "2006", url: "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm" },
+    { title: "Lei 13.243/2016, Marco Legal de Ciência, Tecnologia e Inovação", source: "Presidência da República", year: "2016", url: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13243.htm" },
+    { title: "Peso da indústria no PIB cai no pós-redemocratização", source: "Poder360", year: "2025", url: "https://www.poder360.com.br/poder-economia/peso-da-industria-no-PIB-cai-no-pos-redemocratizacao" },
+    { title: "O Brasil no ranking mundial da indústria em 2024", source: "IEDI", year: "2025", url: "https://iedi.org.br/artigos/destaque/2017/destaque_iedi_20250417.html" },
+    { title: "Brasil tem superávit comercial de US$ 68,3 bi em 2025 (dados MDIC / Secex)", source: "Forbes Brasil", year: "2026", url: "https://forbes.com.br/forbes-money/2026/01/brasil-tem-superavit-comercial-de-us-683-bi-em-2025/" },
+    { title: "Estagnação da produtividade (Observatório da Produtividade)", source: "Blog do IBRE, FGV", year: "2019", url: "https://blogdoibre.fgv.br/posts/estagnacao-da-produtividade-em-2018" },
+    { title: "Produtividade e informalidade no Brasil (texto para discussão)", source: "Instituto de Economia, UFRJ", year: "2022", url: "https://www.ie.ufrj.br/images/IE/TDS/2022/TD_IE_009_2022_SABOIA_ROSA_VILLACORTA_SOARES.pdf" },
+    { title: "Histórico das taxas de juros (Selic)", source: "Banco Central do Brasil", year: "2025", url: "https://www.bcb.gov.br/controleinflacao/historicotaxasjuros" },
+    { title: "Governo anuncia nova política industrial com crédito de R$ 300 bilhões", source: "Agência Brasil, via Movimento Econômico", year: "2024", url: "https://movimentoeconomico.com.br/economia/2024/01/22/governo-anuncia-nova-politica-industrial-com-credito-de-r-300-bilhoes/" },
+    { title: "Nova Indústria Brasil ganha reforço de R$ 70 bilhões", source: "Diário do Comércio", year: "2026", url: "https://diariodocomercio.com.br/?p=562041" },
+    { title: "O que é fato e o que é fake sobre a Nova Indústria Brasil", source: "CNI, Portal da Indústria", year: "2024", url: "https://noticias.portaldaindustria.com.br/noticias/politica-industrial/o-que-e-fato-e-o-que-e-fake-sobre-a-nova-industria-brasil-o-programa-de-politica-industrial-do-pais/" },
+  ],
+};
+
 export const AXES: Axis[] = [
   {
     n: "01",
@@ -520,6 +727,7 @@ export const AXES: Axis[] = [
       "Geração de empregos qualificados",
       "Integração entre indústria, universidades e pesquisa",
     ],
+    content: IND,
   },
   {
     n: "03",

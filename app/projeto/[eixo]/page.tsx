@@ -48,11 +48,11 @@ function Bars({ data }: { data: AxisContent["bars"] }) {
             <div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
               <span className="font-grotesk text-sm font-bold uppercase tracking-[0.1em]">{b.label}</span>
               <span className="font-grotesk text-xs uppercase tracking-[0.15em] text-paper/60">
-                Hoje <strong className="text-red-600">{b.currentLabel}</strong> · Meta {b.targetLabel}
+                Hoje <strong className="text-red-600">{b.currentLabel}</strong> · {b.targetName ?? "Meta"} {b.targetLabel}
               </span>
             </div>
             {/* Trilho = 100%; barra vermelha = hoje; marcador branco = meta */}
-            <div className="relative h-5 bg-paper/10" role="img" aria-label={`${b.label}: hoje ${b.currentLabel}, meta ${b.targetLabel}`}>
+            <div className="relative h-5 bg-paper/10" role="img" aria-label={`${b.label}: hoje ${b.currentLabel}, ${(b.targetName ?? "meta").toLowerCase()} ${b.targetLabel}`}>
               <div data-reveal-bar className="absolute inset-y-0 left-0 bg-red-600" style={{ width: `${b.current}%` }} />
               <div className="absolute -inset-y-1 w-[3px] bg-paper" style={{ left: `calc(${b.target}% - 1.5px)` }} />
             </div>
@@ -62,7 +62,7 @@ function Bars({ data }: { data: AxisContent["bars"] }) {
       </div>
       <div className="mt-6 flex flex-wrap gap-5 font-grotesk text-[11px] uppercase tracking-[0.15em] text-paper/60">
         <span className="flex items-center gap-2"><span className="h-3 w-5 bg-red-600" /> Situação atual</span>
-        <span className="flex items-center gap-2"><span className="h-4 w-[3px] bg-paper" /> Meta</span>
+        <span className="flex items-center gap-2"><span className="h-4 w-[3px] bg-paper" /> Meta ou referência</span>
       </div>
     </figure>
   );
