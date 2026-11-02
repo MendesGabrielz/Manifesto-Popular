@@ -905,6 +905,209 @@ const DEM: AxisContent = {
   ],
 };
 
+const EXT: AxisContent = {
+  diagnosis: [
+    "O mundo voltou a ser disputado entre grandes potências, e países médios como o Brasil são pressionados a escolher um lado. A tradição diplomática brasileira, de dialogar com todos e não se alinhar automaticamente a ninguém, ganhou valor, mas só funciona se o país tiver economia forte, diplomacia competente e projeto próprio.",
+    "O comércio exterior está concentrado. Em 2025, o Brasil exportou US$ 348,3 bilhões, recorde histórico, mas a China comprou 28,7% de tudo e os Estados Unidos 10,8%. A América do Sul inteira ficou com 12,4%, e o Mercosul com 7,5%.",
+    "A dependência tem custo. Em agosto de 2025, os Estados Unidos impuseram tarifa de 50% a produtos brasileiros como café, carnes e frutas, com cerca de 700 exceções, numa decisão que o governo americano justificou também com questões da política interna brasileira. A disputa seguiu em 2026. A lição é clara: quem depende de poucos compradores fica vulnerável a pressões.",
+    "Há oportunidades abertas. O acordo entre Mercosul e União Europeia foi assinado em janeiro de 2026, depois de mais de 25 anos de negociação, mas o Parlamento Europeu enviou o texto ao Tribunal de Justiça da União Europeia, o que pode atrasar a vigência. Em 2025, o Brasil sediou a COP30, em Belém, onde lançou um fundo para pagar países que mantêm florestas tropicais em pé.",
+    "Na defesa, o Brasil gastou cerca de 1,1% do PIB em 2025, segundo o SIPRI, menos da metade da média mundial de 2,5%. Análises especializadas apontam que a maior parte desse orçamento vai para pessoal, sobrando pouco para equipamento e tecnologia.",
+  ],
+  keyNumbers: [
+    { value: "28,7%", label: "das exportações foram para a China em 2025", source: "MDIC / Secex" },
+    { value: "12,4%", label: "das exportações foram para a América do Sul em 2025", source: "MDIC / Secex" },
+    { value: "50%", label: "de tarifa dos EUA sobre parte dos produtos brasileiros, a partir de ago/2025", source: "Governo dos EUA; MDIC" },
+    { value: "25 anos", label: "de negociação até a assinatura do acordo Mercosul–UE, em 2026", source: "Conselho da UE; Itamaraty" },
+    { value: "1,1%", label: "do PIB gastos com defesa em 2025 (média mundial: 2,5%)", source: "SIPRI" },
+    { value: "US$ 125 bi", label: "meta do fundo de florestas tropicais lançado na COP30", source: "Presidência da COP30" },
+  ],
+  bars: {
+    title: "Onde estamos e com o que comparar",
+    caption: "A média mundial de gasto militar é uma referência, não uma meta: o gasto adequado depende de estudos de defesa. A meta do fundo de florestas é a do próprio fundo.",
+    items: [
+      { label: "Gasto com defesa (% do PIB, escala até 3%)", current: (1.1 / 3) * 100, target: (2.5 / 3) * 100, currentLabel: "1,1% (2025)", targetLabel: "média mundial: 2,5%", targetName: "Referência", note: "SIPRI" },
+      { label: "Promessas ao fundo de florestas tropicais (escala até US$ 125 bi)", current: (5.5 / 125) * 100, target: 100, currentLabel: "US$ 5,5 bi a 6,7 bi", targetLabel: "US$ 125 bi", note: "Presidência da COP30; fontes divergem sobre o valor já prometido" },
+    ],
+  },
+  objectives: [
+    "Garantir autonomia estratégica: relações com todas as potências, sem alinhamento automático a nenhuma, como determinam os princípios do artigo 4º da Constituição.",
+    "Diversificar parceiros comerciais e vender mais produtos de maior valor, reduzindo a vulnerabilidade a pressões de um único comprador.",
+    "Integrar de fato a América do Sul, com comércio, estradas, ferrovias e energia.",
+    "Transformar o papel do Brasil em clima e florestas em investimento, tecnologia e emprego.",
+    "Reformar a governança global para que países em desenvolvimento tenham voz proporcional ao seu peso.",
+    "Ampliar a cooperação científica e tecnológica com diferentes parceiros, com transferência de tecnologia.",
+    "Manter uma defesa compatível com o tamanho do território e do mar brasileiro.",
+  ],
+  proposals: [
+    {
+      title: "Política externa de Estado, não de governo",
+      description: "Diretrizes de longo prazo para a política externa, debatidas com a sociedade e aprovadas pelo Congresso, como já acontece com a Política e a Estratégia Nacional de Defesa, para que o país não mude de rumo a cada eleição e seja visto como parceiro confiável.",
+      competence: "União: Presidente da República (Constituição, art. 84) e Congresso Nacional (art. 49)",
+      term: "Curto prazo",
+    },
+    {
+      title: "Diversificar mercados e defender quem produz",
+      description: "Ampliar acordos comerciais com diferentes regiões, como o acordo Mercosul–União Europeia, e reagir a medidas unilaterais com negociação, contencioso na OMC e, em último caso, a Lei da Reciprocidade Econômica (Lei 15.122/2025). Apoiar com crédito e promoção comercial as empresas atingidas por barreiras externas.",
+      competence: "União, por meio do Itamaraty, do MDIC, da Camex e da ApexBrasil",
+      term: "Curto prazo",
+      alternatives: [
+        "Negociação bilateral direta com o país que impôs a barreira.",
+        "Contencioso na Organização Mundial do Comércio.",
+        "Medidas de reciprocidade, previstas em lei, como último recurso.",
+      ],
+    },
+    {
+      title: "Integração sul-americana de verdade",
+      description: "Investir nas rotas físicas que ligam o Brasil aos vizinhos, como estradas, ferrovias, hidrovias e linhas de energia, conectadas às propostas do eixo de Infraestrutura. Fazer o Mercosul funcionar com regras estáveis e ampliar a integração produtiva, para que a região venda mais em conjunto.",
+      competence: "União, em negociação com os países vizinhos",
+      term: "Longo prazo",
+    },
+    {
+      title: "Clima e Amazônia como fonte de poder",
+      description: "Tornar operacional o fundo de florestas tropicais lançado na COP30, cobrar dos países ricos o financiamento climático prometido e transformar a bioeconomia amazônica em indústria, ciência e renda para quem vive na floresta, em cooperação com os demais países amazônicos.",
+      competence: "União, com estados amazônicos e a Organização do Tratado de Cooperação Amazônica",
+      term: "Médio prazo",
+    },
+    {
+      title: "Reforma da governança global",
+      description: "Defender a reforma do Conselho de Segurança da ONU, com assento permanente para o Brasil, ao lado de Alemanha, Índia e Japão; a revisão das cotas do FMI e do Banco Mundial; e a volta do funcionamento pleno do sistema de solução de controvérsias da OMC, travado desde 2019. Usar o G20 e o BRICS como espaços de articulação, sem transformá-los em blocos contra terceiros.",
+      competence: "União, por meio do Itamaraty",
+      term: "Longo prazo",
+    },
+    {
+      title: "Cooperação científica com retorno",
+      description: "Parcerias científicas com diferentes potências, como o programa de satélites feito há décadas com a China, sempre com transferência de tecnologia, formação de pesquisadores brasileiros e acesso a infraestrutura de pesquisa no exterior.",
+      competence: "União, por meio do MCTI e do Itamaraty, com universidades",
+      term: "Médio prazo",
+    },
+    {
+      title: "Defesa para um país continental",
+      description: "Orçamento de defesa previsível, com mais peso para equipamento, tecnologia e a indústria de defesa nacional, como o cargueiro KC-390 e o programa de submarinos, e foco na proteção da Amazônia, das fronteiras e da área marítima brasileira.",
+      competence: "União (Ministério da Defesa), com aprovação do orçamento pelo Congresso",
+      term: "Longo prazo",
+      alternatives: [
+        "Aumentar gradualmente o gasto com defesa como proporção do PIB.",
+        "Manter o gasto total e reorganizar o orçamento, reduzindo o peso de pessoal em favor de investimento.",
+      ],
+    },
+  ],
+  implementation: [
+    {
+      title: "Congresso no centro das decisões",
+      body: "Tratados e acordos que criam compromissos para o país dependem de aprovação do Congresso (Constituição, art. 49). Envolver parlamentares desde a negociação reduz o risco de acordos parados.",
+    },
+    {
+      title: "Coordenação dentro do governo",
+      body: "Comércio, defesa, ciência e clima precisam falar a mesma língua. Itamaraty, MDIC, Defesa, MCTI e Meio Ambiente devem atuar com estratégia comum e metas compartilhadas.",
+    },
+    {
+      title: "Diplomacia profissional",
+      body: "Concursos regulares para o Itamaraty, embaixadas com equipes comerciais e científicas, e a ApexBrasil apoiando pequenas e médias empresas que querem exportar.",
+    },
+    {
+      title: "Ouvir quem é afetado",
+      body: "Acordos comerciais têm ganhadores e perdedores. Setores produtivos, trabalhadores, estados e sociedade civil devem ser ouvidos antes das negociações, com medidas de transição para quem perde.",
+    },
+    {
+      title: "Coerência entre discurso e prática",
+      body: "Credibilidade internacional depende de cumprir o que se promete em casa, como a redução do desmatamento e o respeito a compromissos assumidos.",
+    },
+  ],
+  viability: {
+    costs: [
+      "A maior parte das propostas de política externa tem custo fiscal baixo: dependem de negociação, articulação e pessoal qualificado.",
+      "Defesa é a exceção. Cada 0,1 ponto percentual do PIB a mais equivale a cerca de R$ 12 bilhões por ano, considerando o PIB de 2024. É uma estimativa nossa, para dar ordem de grandeza.",
+      "Obras de integração regional têm custos que dependem de cada projeto e devem ser estimados em estudos técnicos.",
+    ],
+    funding: [
+      "Orçamento federal, nos limites das regras fiscais.",
+      "BNDES e crédito às exportações para apoiar empresas brasileiras no exterior.",
+      "Novo Banco de Desenvolvimento, do BRICS, e bancos regionais para obras de integração.",
+      "Fundos climáticos internacionais e o fundo de florestas tropicais.",
+    ],
+    limits: [
+      "O poder de influência do Brasil é real, mas limitado: o país não define sozinho as regras do comércio e da segurança globais.",
+      "A dependência de exportações de commodities reduz a margem de negociação.",
+      "A disputa entre grandes potências gera pressão por alinhamento e pode trazer retaliações.",
+    ],
+  },
+  timeline: [
+    {
+      term: "Curto prazo",
+      items: [
+        "Diretrizes de política externa debatidas e aprovadas.",
+        "Apoio a exportadores atingidos por barreiras e negociação para removê-las.",
+        "Conclusão da ratificação do acordo Mercosul–União Europeia.",
+      ],
+    },
+    {
+      term: "Médio prazo",
+      items: [
+        "Fundo de florestas tropicais operando.",
+        "Novos acordos comerciais com outras regiões.",
+        "Parcerias científicas com transferência de tecnologia.",
+      ],
+    },
+    {
+      term: "Longo prazo",
+      items: [
+        "Rotas de integração física com a América do Sul concluídas.",
+        "Exportações mais diversificadas, por destino e por produto.",
+        "Reforma da governança global e defesa nacional modernizada.",
+      ],
+    },
+  ],
+  indicators: [
+    { name: "Peso do maior comprador nas exportações", current: "China: 28,7% (2025)", target: "Reduzir a concentração; meta depende de estudos", source: "MDIC / Secex" },
+    { name: "Exportações para a América do Sul", current: "12,4% do total (2025)", target: "Ampliar; meta depende de estudos", source: "MDIC / Secex" },
+    { name: "Barreiras contra produtos brasileiros", current: "Tarifa de 50% dos EUA sobre parte das exportações (desde 2025)", target: "Remoção por negociação ou contencioso", source: "MDIC; governo dos EUA" },
+    { name: "Acordo Mercosul–União Europeia", current: "Assinado em 2026; vigência depende do lado europeu", target: "Em vigor, com medidas de transição para setores afetados", source: "Conselho da UE; Parlamento Europeu; Itamaraty" },
+    { name: "Gasto com defesa", current: "1,1% do PIB (2025)", target: "Depende da Estratégia Nacional de Defesa; média mundial: 2,5%", source: "SIPRI" },
+    { name: "Fundo de florestas tropicais", current: "US$ 5,5 bi a 6,7 bi prometidos", target: "US$ 125 bi", source: "Presidência da COP30" },
+  ],
+  risks: [
+    {
+      title: "Pressão por alinhamento",
+      body: "Grandes potências podem punir com tarifas, sanções ou restrições tecnológicas quem não se alinha. A autonomia exige preparo para absorver essas pressões.",
+    },
+    {
+      title: "Dependência de um único comprador",
+      body: "Diversificar mercados leva anos. Até lá, uma mudança de política na China ou nos Estados Unidos pode afetar milhões de empregos no Brasil.",
+    },
+    {
+      title: "Perdedores dos acordos comerciais",
+      body: "Acordos como o Mercosul–União Europeia podem beneficiar o agronegócio e pressionar setores da indústria nacional. Sem medidas de transição, aumentam a desindustrialização.",
+    },
+    {
+      title: "Instabilidade regional",
+      body: "Crises políticas e econômicas em países vizinhos podem travar a integração e gerar fluxos migratórios que exigem resposta humanitária.",
+    },
+    {
+      title: "Promessas climáticas não cumpridas",
+      body: "Se os países ricos não entregarem o financiamento prometido, o fundo de florestas pode não sair do papel, e a credibilidade das negociações climáticas cai.",
+    },
+    {
+      title: "Discurso sem recursos",
+      body: "Ambição internacional sem orçamento para diplomacia, defesa e ciência gera promessas que o país não consegue cumprir.",
+    },
+  ],
+  references: [
+    { title: "Constituição da República Federativa do Brasil (arts. 4º, 21, 49 e 84)", source: "Presidência da República", year: "1988", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" },
+    { title: "Lei 15.122/2025, Lei da Reciprocidade Econômica", source: "Presidência da República", year: "2025", url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15122.htm" },
+    { title: "Brasil tem superávit comercial de US$ 68,3 bi em 2025 (dados MDIC / Secex)", source: "Forbes Brasil", year: "2026", url: "https://forbes.com.br/forbes-money/2026/01/brasil-tem-superavit-comercial-de-us-683-bi-em-2025/" },
+    { title: "O que o Brasil exporta (dados MDIC / Secex de 2025)", source: "DHL", year: "2026", url: "https://www.dhl.com/discover/pt-br/conselhos-de-logistica/o-que-o-brasil-exporta" },
+    { title: "Lula participa da cúpula do Mercosul no Paraguai (exportações ao bloco em 2025)", source: "Correio da Manhã", year: "2026", url: "https://www.correiodamanha.com.br/politica/2026/06/297925-lula-participa-da-cupula-do-mercosul-no-paraguai-nesta-terca.html" },
+    { title: "Trump assina ordem que confirma tarifas de 50% contra o Brasil, mas abre exceções", source: "Bloomberg Línea", year: "2025", url: "https://www.bloomberglinea.com.br/internacional/trump-cita-ameaca-do-governo-brasileiro-e-implementa-tarifas-de-50-contra-o-pais/" },
+    { title: "Trump confirma taxação de 50%, mas com exceção a quase 700 produtos", source: "Correio da Manhã", year: "2025", url: "https://www.correiodamanha.com.br/politica/2025/07/212827-trump-confirma-taxacao-de-50-mas-com-excecao-a-quase-700-produtos.html" },
+    { title: "Entenda o que ainda falta para o acordo UE–Mercosul entrar em vigor", source: "Poder360", year: "2026", url: "https://www.poder360.com.br/poder-internacional/entenda-o-que-ainda-falta-para-o-acordo-ue-mercosul-entrar-em-vigor/" },
+    { title: "Parlamento Europeu envia acordo com o Mercosul para o Tribunal Europeu", source: "Observador", year: "2026", url: "https://observador.pt/2026/01/21/parlamento-europeu-envia-acordo-com-mercosul-para-tribunal-europeu/" },
+    { title: "Gasto militar do Brasil em 2025 (dados SIPRI)", source: "Sociedade Militar", year: "2026", url: "https://www.sociedademilitar.com.br/2026/08/enquanto-mundo-bate-recorde-de-us-29-trilhoes-em-defesa-brasil-gasta-so-11-do-pib-menos-da-metade-do-patamar-global-mesmo-com-projetos-bilionarios-para-financiar-afch.html" },
+    { title: "Does Brazil Spend Too Much on Military Personnel?", source: "RUSI", year: "s.d.", url: "https://www.rusi.org/explore-our-research/publications/commentary/does-brazil-spend-too-much-military-personnel" },
+    { title: "COP30 debuts forest fund, absent from final declaration", source: "Mexico Business News", year: "2025", url: "https://mexicobusiness.news/sustainability/news/cop30-debuts-forest-fund-absent-final-declaration" },
+    { title: "COP30: collective effort, constrained ambition", source: "Stockholm Environment Institute", year: "2025", url: "https://www.sei.org/perspectives/cop30-collective-effort-constrained-ambition/" },
+  ],
+};
+
 export const AXES: Axis[] = [
   {
     n: "01",
@@ -976,6 +1179,7 @@ export const AXES: Axis[] = [
       "Defesa dos interesses nacionais",
       "Diversificação das parcerias internacionais",
     ],
+    content: EXT,
   },
   {
     n: "05",

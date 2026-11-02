@@ -57,7 +57,7 @@ Criticar não basta. Em páginas próprias (`/projeto`), o site apresenta propos
 
 Cada eixo segue a mesma estrutura: diagnóstico, objetivos, propostas, implementação, viabilidade econômica, prazos, indicadores, riscos e referências. Nenhum número entra sem fonte, e quando não há base para uma meta, o texto diz que ela depende de estudos técnicos.
 
-Os eixos de **Educação, Ciência e Tecnologia**, **Industrialização e Desenvolvimento Econômico**, **Infraestrutura** e **Democracia e Fortalecimento Institucional** já estão publicados. Os demais aparecem como "em construção" até passarem por pesquisa e revisão.
+Os cinco eixos estão publicados. Novos eixos podem entrar como "em construção" até passarem por pesquisa e revisão.
 
 ---
 
