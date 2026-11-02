@@ -258,7 +258,7 @@ function UnderConstruction({ axis }: { axis: Axis }) {
         <p className="font-grotesk text-xs font-bold uppercase tracking-[0.3em] text-red-600">Em construção</p>
         <p className="mt-4 max-w-3xl font-grotesk text-xl font-medium leading-snug md:text-2xl">
           Este eixo ainda está em pesquisa. Ele será publicado com diagnóstico, propostas, custos,
-          prazos, indicadores, riscos e fontes, como o eixo de Infraestrutura. Até lá, nada aqui é proposta.
+          prazos, indicadores, riscos e fontes, como os eixos já publicados. Até lá, nada aqui é proposta.
         </p>
       </div>
       <div>
