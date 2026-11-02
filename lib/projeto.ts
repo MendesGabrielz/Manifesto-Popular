@@ -692,6 +692,219 @@ const IND: AxisContent = {
   ],
 };
 
+const DEM: AxisContent = {
+  diagnosis: [
+    "A democracia brasileira resistiu, mas perdeu a confiança de muita gente. Em agosto de 2025, só 45% dos brasileiros diziam confiar no Congresso, e 36% nos partidos políticos, segundo a Genial/Quaest. Quando as pessoas deixam de acreditar nas instituições, abre-se espaço para quem promete governar sem elas.",
+    "A corrupção continua sendo percebida como alta. No Índice de Percepção da Corrupção de 2025, da Transparência Internacional, o Brasil teve 35 pontos em 100 e ficou em 107º lugar, abaixo da média global de 42. A ONG cita casos recentes, como as fraudes em descontos de benefícios do INSS. A Controladoria-Geral da União contesta a metodologia, que mede percepção e não ocorrência.",
+    "O orçamento perdeu planejamento e transparência. O Orçamento de 2026 destinou cerca de R$ 61 bilhões a emendas parlamentares, dos quais R$ 37,8 bilhões são de pagamento obrigatório. Em 2025, o STF mandou a Polícia Federal investigar 964 emendas, somando R$ 694,6 milhões, que não tinham registro adequado de destino.",
+    "A Justiça é lenta e distante de quem mais precisa. O Judiciário terminou 2025 com 75,5 milhões de processos pendentes, o menor acervo em nove anos, mas ainda um volume enorme. A Constituição promete assistência jurídica gratuita a quem não pode pagar, e as Defensorias Públicas ainda não chegam a todo o país.",
+    "Também há sinais de vitalidade. Em 2023, 1,42 milhão de pessoas participaram da elaboração do Plano Plurianual do governo federal pela internet, com 8.254 propostas. A cláusula de desempenho e o fim das coligações em eleições proporcionais, aprovados em 2017, já começaram a reduzir a fragmentação partidária.",
+  ],
+  keyNumbers: [
+    { value: "35/100", label: "nota do Brasil no Índice de Percepção da Corrupção de 2025 (107º lugar)", source: "Transparência Internacional" },
+    { value: "36%", label: "confiam nos partidos políticos; 45% no Congresso (ago/2025)", source: "Genial/Quaest" },
+    { value: "R$ 61 bi", label: "em emendas parlamentares no Orçamento de 2026", source: "Congresso Nacional, LOA 2026" },
+    { value: "R$ 694,6 mi", label: "em 964 emendas sem registro adequado, investigadas por ordem do STF (2025)", source: "STF / TCU" },
+    { value: "75,5 mi", label: "processos pendentes na Justiça ao fim de 2025", source: "CNJ, Justiça em Números" },
+    { value: "1,42 mi", label: "pessoas participaram do PPA Participativo pela internet (2023)", source: "Secretaria-Geral da Presidência" },
+  ],
+  bars: {
+    title: "Onde estamos e com o que comparar",
+    caption: "Nenhuma das referências abaixo é meta legal: a média global do índice de corrupção e o recorde de processos de 2023 servem para dar a dimensão do problema.",
+    items: [
+      { label: "Índice de Percepção da Corrupção (0 a 100)", current: 35, target: 42, currentLabel: "35 (2025)", targetLabel: "média global: 42", targetName: "Referência", note: "Transparência Internacional, IPC 2025" },
+      { label: "Processos pendentes na Justiça (escala até 90 milhões)", current: (75.5 / 90) * 100, target: (85.2 / 90) * 100, currentLabel: "75,5 mi (2025)", targetLabel: "recorde de 85,2 mi em 2023", targetName: "Referência", note: "CNJ, Justiça em Números 2025 e 2026" },
+    ],
+  },
+  objectives: [
+    "Transparência total no uso do dinheiro público, com rastreamento de cada real da origem ao destino, inclusive nas emendas parlamentares.",
+    "Prevenir e punir a corrupção com eficácia, sempre com respeito ao devido processo legal.",
+    "Ter uma administração pública profissional, digital e avaliada por resultados.",
+    "Aproximar eleitores e eleitos, com partidos mais programáticos e campanhas transparentes.",
+    "Tornar a participação popular permanente, e não só em época de eleição.",
+    "Manter o equilíbrio e a independência entre os Poderes, com freios e contrapesos claros.",
+    "Garantir acesso à justiça rápido e gratuito para quem não pode pagar.",
+  ],
+  proposals: [
+    {
+      title: "Orçamento rastreável de ponta a ponta",
+      description: "Toda emenda e toda transferência publicada em tempo real, com autor, beneficiário final, objeto e andamento da execução. Nenhuma modalidade de repasse sem identificação de quem indicou e de onde o dinheiro foi parar.",
+      competence: "Congresso Nacional (leis orçamentárias, Constituição, arts. 165 e 166), com o TCU e a CGU",
+      term: "Curto prazo",
+      alternatives: [
+        "Manter o volume atual de emendas, com transparência total e fiscalização reforçada.",
+        "Reduzir o peso das emendas de pagamento obrigatório e devolver espaço ao planejamento setorial.",
+        "Exigir que as emendas financiem apenas ações já previstas no Plano Plurianual e nos planos setoriais.",
+      ],
+    },
+    {
+      title: "Prevenção e punição da corrupção",
+      description: "Fortalecer a autonomia técnica da CGU, do TCU, da Polícia Federal e do Ministério Público; cruzar dados de licitações e contratos para detectar fraudes antes do pagamento; exigir programas de integridade de grandes fornecedores do Estado; e proteger quem denuncia.",
+      competence: "União, estados e municípios, cada um em sua esfera; leis federais como a Lei Anticorrupção (12.846/2013)",
+      term: "Curto prazo",
+    },
+    {
+      title: "Serviço público profissional",
+      description: "Concursos regulares, como o Concurso Nacional Unificado de 2024; redução dos cargos de livre nomeação; avaliação de desempenho que sirva para desenvolver os servidores e corrigir problemas; e mais serviços digitais, como os do gov.br.",
+      competence: "Cada ente da federação; a União para o serviço público federal",
+      term: "Médio prazo",
+      alternatives: [
+        "Reforma administrativa ampla, por emenda constitucional.",
+        "Mudanças graduais por lei e regulamento, começando pela gestão de desempenho e pela digitalização.",
+      ],
+    },
+    {
+      title: "Reforma política que aproxime eleitor e eleito",
+      description: "Hoje o eleitor vota em um candidato e pode eleger outro, e poucos sabem quem os representa. Há caminhos diferentes, todos com prós e contras, que devem ser debatidos com a sociedade. Qualquer mudança nas regras eleitorais só vale para eleições realizadas mais de um ano depois da sua aprovação (Constituição, art. 16).",
+      competence: "Congresso Nacional, por lei ou emenda constitucional",
+      term: "Médio prazo",
+      alternatives: [
+        "Voto distrital misto: metade dos deputados eleita por distrito, metade por lista partidária.",
+        "Lista partidária preordenada, com financiamento público e democracia interna nos partidos.",
+        "Manter o sistema proporcional atual e consolidar a cláusula de desempenho e o fim das coligações.",
+      ],
+    },
+    {
+      title: "Participação popular permanente",
+      description: "Tornar permanente o planejamento participativo do orçamento federal, como no PPA de 2024–2027; dar poder real aos conselhos de políticas públicas; incentivar o orçamento participativo nos municípios, experiência que o Brasil exportou a partir de Porto Alegre em 1989; e permitir a assinatura eletrônica de projetos de lei de iniciativa popular.",
+      competence: "União, estados e municípios",
+      term: "Curto prazo",
+    },
+    {
+      title: "Freios e contrapesos claros",
+      description: "Regras claras e previsíveis sobre decisões individuais de ministros e prazos para pedidos de vista nos tribunais superiores, preservando a independência do Judiciário. Qualquer mudança deve fortalecer as instituições, e não servir para intimidar quem julga.",
+      competence: "Congresso Nacional (emenda constitucional ou lei) e os próprios tribunais (regimentos internos)",
+      term: "Médio prazo",
+      alternatives: [
+        "Mudanças pelos regimentos internos dos tribunais, como já foi feito com os prazos de pedido de vista.",
+        "Regras gerais por lei ou emenda constitucional, aprovadas pelo Congresso.",
+        "Mandatos fixos para ministros de tribunais superiores, proposta que já tramitou no Congresso e divide especialistas.",
+      ],
+    },
+    {
+      title: "Justiça perto de quem precisa",
+      description: "Defensorias Públicas em todas as comarcas, como determina a Emenda Constitucional 80/2014; mais conciliação e mediação para resolver conflitos sem processo; juizados especiais fortalecidos; e uso de tecnologia, inclusive inteligência artificial com supervisão humana, para acelerar tarefas repetitivas.",
+      competence: "Estados e União (Defensorias); Conselho Nacional de Justiça e tribunais",
+      term: "Médio prazo",
+    },
+  ],
+  implementation: [
+    {
+      title: "Prioridade ao que não exige emenda constitucional",
+      body: "Mudar a Constituição exige três quintos dos votos em dois turnos na Câmara e no Senado. Transparência, gestão e participação podem avançar por lei, decreto e regimento, sem esperar uma maioria tão difícil.",
+    },
+    {
+      title: "Dados abertos e tecnologia",
+      body: "O Brasil já tem portais de transparência e ferramentas de cruzamento de dados de licitações. O passo seguinte é publicar tudo em formato aberto, padronizado e em tempo real, nos três níveis de governo.",
+    },
+    {
+      title: "Testar antes de generalizar",
+      body: "Muitas inovações democráticas brasileiras, como o orçamento participativo, nasceram em municípios. Experiências locais avaliadas podem orientar o que levar para o país inteiro.",
+    },
+    {
+      title: "Controle de quem controla",
+      body: "Órgãos de controle e de investigação também precisam prestar contas, com corregedorias atuantes e regras claras, para que o combate à corrupção não vire instrumento de perseguição política.",
+    },
+    {
+      title: "Diálogo com a sociedade",
+      body: "Reformas das regras do jogo político só ganham legitimidade se forem debatidas com a sociedade, com audiências e consultas públicas, e não decididas apenas por quem será afetado por elas.",
+    },
+  ],
+  viability: {
+    costs: [
+      "A maior parte das propostas tem custo fiscal baixo: são mudanças de regras, transparência e gestão.",
+      "Os custos maiores estão na ampliação das Defensorias Públicas, em sistemas digitais e na contratação de servidores, e dependem de estudos de cada ente.",
+      "As emendas parlamentares, de cerca de R$ 61 bilhões em 2026, não são custo novo: são uma decisão sobre como gastar um dinheiro que já existe.",
+    ],
+    funding: [
+      "Orçamento ordinário de cada Poder e de cada ente.",
+      "Recursos recuperados em acordos de leniência e no combate a fraudes.",
+      "Ganhos de eficiência com digitalização de serviços e processos.",
+    ],
+    limits: [
+      "Muitas mudanças dependem do voto de quem será afetado por elas, como parlamentares e partidos.",
+      "Emendas constitucionais exigem maioria qualificada difícil de reunir.",
+      "Mudanças nas regras eleitorais têm de respeitar o prazo de um ano antes da eleição.",
+    ],
+  },
+  timeline: [
+    {
+      term: "Curto prazo",
+      items: [
+        "Rastreamento completo das emendas e transferências.",
+        "Participação digital permanente no planejamento do orçamento.",
+        "Proteção efetiva a quem denuncia corrupção.",
+      ],
+    },
+    {
+      term: "Médio prazo",
+      items: [
+        "Modernização do serviço público.",
+        "Expansão das Defensorias Públicas.",
+        "Reforma política, valendo a partir da eleição seguinte à aprovação.",
+      ],
+    },
+    {
+      term: "Longo prazo",
+      items: [
+        "Recuperação da confiança nas instituições.",
+        "Justiça mais rápida e acessível.",
+        "Índice de corrupção acima da média global.",
+      ],
+    },
+  ],
+  indicators: [
+    { name: "Índice de Percepção da Corrupção", current: "35 pontos, 107º lugar (2025)", target: "Acima da média global (42); meta a definir", source: "Transparência Internacional" },
+    { name: "Emendas com destino rastreável", current: "R$ 694,6 mi em emendas sem registro investigados (2025)", target: "100% das emendas rastreáveis", source: "STF; TCU; CGU" },
+    { name: "Processos pendentes na Justiça", current: "75,5 milhões (fim de 2025)", target: "Redução contínua, conforme metas do CNJ", source: "CNJ, Justiça em Números" },
+    { name: "Confiança no Congresso e nos partidos", current: "45% e 36% (ago/2025)", target: "Aumento contínuo; acompanhamento anual", source: "Genial/Quaest" },
+    { name: "Participação no planejamento federal", current: "1,42 milhão de participantes (PPA 2024–2027)", target: "Ampliar a cada ciclo do PPA", source: "Secretaria-Geral da Presidência" },
+    { name: "Comarcas atendidas pela Defensoria Pública", current: "A medir na Pesquisa Nacional da Defensoria Pública", target: "Todas as comarcas (EC 80/2014)", source: "Defensorias Públicas; EC 80/2014" },
+  ],
+  risks: [
+    {
+      title: "Conflito de interesses",
+      body: "Quem vota as regras do sistema político é quem se beneficia delas. Sem pressão da sociedade, reformas tendem a proteger quem já está no poder.",
+    },
+    {
+      title: "Combate à corrupção sem garantias",
+      body: "Investigação que atropela o devido processo gera nulidades, impunidade e perseguição política. Eficácia e garantias precisam andar juntas.",
+    },
+    {
+      title: "Reforma política mal desenhada",
+      body: "Mudar o sistema eleitoral pode ter efeitos inesperados, como concentrar poder em poucos partidos ou nas máquinas partidárias. Toda mudança precisa de transição e avaliação.",
+    },
+    {
+      title: "Tensão entre os Poderes",
+      body: "Propostas sobre os tribunais podem ser usadas para intimidar juízes. Por isso devem ser debatidas com calma, longe de casos concretos.",
+    },
+    {
+      title: "Exclusão digital",
+      body: "Participação só pela internet deixa de fora quem não tem conexão ou habilidade digital. Plenárias presenciais e conselhos continuam necessários.",
+    },
+    {
+      title: "Polarização",
+      body: "Num ambiente polarizado, qualquer reforma institucional é vista como manobra do adversário. Acordos amplos e regras que valham para todos reduzem esse risco.",
+    },
+  ],
+  references: [
+    { title: "Constituição da República Federativa do Brasil (arts. 14 a 17, 37, 60, 61, 70 a 75, 134, 165 e 166)", source: "Presidência da República", year: "1988", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" },
+    { title: "Lei 12.527/2011, Lei de Acesso à Informação", source: "Presidência da República", year: "2011", url: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm" },
+    { title: "Lei 12.846/2013, Lei Anticorrupção", source: "Presidência da República", year: "2013", url: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12846.htm" },
+    { title: "Lei Complementar 135/2010, Lei da Ficha Limpa", source: "Presidência da República", year: "2010", url: "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp135.htm" },
+    { title: "Emenda Constitucional 97/2017, cláusula de desempenho e fim das coligações proporcionais", source: "Presidência da República", year: "2017", url: "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc97.htm" },
+    { title: "Emenda Constitucional 80/2014, Defensoria Pública", source: "Presidência da República", year: "2014", url: "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc80.htm" },
+    { title: "Brasil repete pior posição em índice de corrupção da Transparência Internacional", source: "InfoMoney", year: "2026", url: "https://www.infomoney.com.br/politica/brasil-repete-pior-posicao-em-indice-de-corrupcao-da-transparencia-internacional/" },
+    { title: "Brasil repete segunda pior nota no ranking global de percepção de corrupção", source: "SBT News", year: "2026", url: "https://sbtnews.sbt.com.br/noticia/politica/brasil-repete-segunda-pior-nota-no-ranking-global-de-percepcao-de-corrupcao" },
+    { title: "Orçamento de 2026 destina R$ 61 bilhões em emendas parlamentares", source: "Boca", year: "2025", url: "https://boca.com.br/politica/orcamento-2026-destina-r-61-bilhoes-em-emendas-parlamentares" },
+    { title: "Dino determina que PF investigue R$ 694 milhões em emendas parlamentares sem registro", source: "Jornal do Brasil", year: "2025", url: "https://www.jb.com.br/brasil/justica/2025/08/amp/1056667-dino-determina-que-pf-investigue-rs-694-milhoes-em-emendas-parlamentares-sem-registro.html" },
+    { title: "Judiciário reduz acervo de processos e bate recorde de sentenças em 2024 (Justiça em Números 2025)", source: "Consultor Jurídico", year: "2025", url: "https://www.conjur.com.br/2025-set-23/judiciario-reduz-acervo-de-processos-e-bate-recorde-de-sentencas-e-decisoes-em-2024//?print=1" },
+    { title: "Judiciário encerrou 2025 com 75,5 milhões de processos (Justiça em Números 2026)", source: "Correio da Manhã", year: "2026", url: "https://www.correiodamanha.com.br/economia/justica/2026/06/amp/297188-judiciario-encerrou-2025-com-755-milhoes-de-processos-e-recorde-de-acoes.html" },
+    { title: "Instituições democráticas, confiança e a ação parlamentar (pesquisa Genial/Quaest)", source: "O Povo", year: "2025", url: "https://mais.opovo.com.br/colunistas/paula-vieira/2025/09/08/instituicoes-democraticas-confianca-e-a-acao-parlamentar.html" },
+    { title: "Resultados do PPA Participativo", source: "Secretaria-Geral da Presidência da República", year: "2023", url: "https://www.gov.br/secretariageral/pt-br/centrais-de-conteudo/publicacoes/relatorios/resultados-ppa-participativo.pdf" },
+  ],
+};
+
 export const AXES: Axis[] = [
   {
     n: "01",
@@ -781,6 +994,7 @@ export const AXES: Axis[] = [
       "Acesso à justiça",
       "Controle e fiscalização dos recursos públicos",
     ],
+    content: DEM,
   },
 ];
 
