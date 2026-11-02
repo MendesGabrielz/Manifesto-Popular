@@ -13,11 +13,14 @@ gsap.registerPlugin(useGSAP);
 export default function MagneticButton({
   children,
   href,
+  external = false,
   strength = 0.4,
   className = "",
 }: {
   children: React.ReactNode;
   href: string;
+  // Abre em nova aba (links para fora do site)
+  external?: boolean;
   strength?: number;
   className?: string;
 }) {
@@ -70,6 +73,7 @@ export default function MagneticButton({
       <a
         ref={button}
         href={href}
+        {...(external && { target: "_blank", rel: "noopener noreferrer" })}
         className={`group relative inline-flex items-center justify-center overflow-hidden rounded-full will-change-transform ${className}`}
       >
         {/* Preenchimento que sobe no hover */}

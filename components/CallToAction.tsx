@@ -10,8 +10,8 @@ import { HammerSickle, RaisedFist, RedStar } from "./Symbols";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-// Troque pelos links do seu coletivo
-const COLLECTIVE_URL = "#organize";
+// Grupo de WhatsApp do coletivo
+const COLLECTIVE_URL = "https://chat.whatsapp.com/GNJpM4PqzE4JV314OXI525";
 const READING_URL = "https://www.marxists.org/portugues/";
 
 export default function CallToAction() {
@@ -61,6 +61,7 @@ export default function CallToAction() {
         <div className="cta-fade -my-4 md:-my-8">
           <MagneticButton
             href={COLLECTIVE_URL}
+            external
             className="h-36 w-36 bg-ink font-grotesk text-sm font-bold uppercase tracking-[0.15em] text-paper md:h-48 md:w-48 md:text-base"
           >
             <span className="flex flex-col items-center gap-2">
