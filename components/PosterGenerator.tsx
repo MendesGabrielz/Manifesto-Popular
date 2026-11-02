@@ -249,7 +249,7 @@ export default function PosterGenerator() {
             <div ref={boxRef} className="flex min-h-0 flex-1 items-center py-[3%]">
               <p
                 ref={textRef}
-                className="w-full font-poster uppercase leading-[1.02] tracking-tighter [overflow-wrap:normal] [word-break:keep-all]"
+                className="w-full font-poster uppercase pb-[0.32em] pt-[0.14em] leading-[1.18] tracking-[-0.01em] [overflow-wrap:normal] [word-break:keep-all]"
               >
                 {slogan.trim() || "Sua palavra de ordem"}
               </p>
