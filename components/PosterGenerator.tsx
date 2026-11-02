@@ -6,7 +6,7 @@ import { Download, Loader2, Share2 } from "lucide-react";
 import { HammerSickle, RaisedFist, RedStar } from "./Symbols";
 
 // Endereço gratuito da Vercel; precisa bater com o nome do projeto lá
-const SITE_DOMAIN = "MANIFESTO-POPULAR.VERCEL.APP";
+const SITE_DOMAIN = "MANIFESTOPOPULAR.VERCEL.APP";
 const MAX_CHARS = 60;
 const EXPORT_SIZE = 1080; // px, quadrado do feed do Instagram
 const FILE_NAME = "cartaz-luta.png";
