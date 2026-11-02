@@ -55,6 +55,15 @@ const CARDS: Card[] = [
   },
   {
     kind: "history",
+    year: "1932",
+    title: "O Estado contra o povo",
+    body: "Sob Stálin, a coletivização forçada causa uma fome que mata de 6 a 8 milhões de soviéticos. A lição: Estado forte sem democracia não é o povo no poder, é o poder contra o povo.",
+    scene: "rails",
+    src: "/images/historia/1932-canal-mar-branco-gulag.jpg",
+    credit: "Presos do Gulag constroem o canal do Mar Branco, c. 1932. Autor desconhecido, domínio público",
+  },
+  {
+    kind: "history",
     year: "1948",
     title: "Saúde como direito",
     body: "Nasce o NHS britânico: atendimento universal e gratuito, pago por todos, para todos. Prova de que o público funciona.",

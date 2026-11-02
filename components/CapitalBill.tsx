@@ -53,7 +53,7 @@ const BILLS: Bill[] = [
     Icon: Landmark,
     theme: "paper",
     stat: { value: 438, suffix: "%", label: "de juros ao ano no rotativo do cartão (dez/2025)" },
-    text: "Só quatro bancos — Banco do Brasil, Caixa, Itaú e Bradesco — concentram 57% de todo o crédito do país. Enquanto você paga 438% de juros ao ano no rotativo do cartão, o Itaú fechou 2025 com R$ 46,8 bilhões de lucro, o maior da história dos bancos brasileiros em valores corrigidos pela inflação.",
+    text: "Só quatro bancos — Banco do Brasil, Caixa, Itaú e Bradesco — concentram 57% de todo o crédito do país. Enquanto o rotativo do cartão cobra 438% de juros ao ano (desde 2024, a lei impede que a dívida passe do dobro do valor original), o Itaú fechou 2025 com R$ 46,8 bilhões de lucro, o maior da história dos bancos brasileiros em valores corrigidos pela inflação.",
     items: [
       { desc: "Juros do rotativo do cartão (a.a.)", value: "438%", bar: 1 },
       { desc: "Crédito nas mãos de 4 bancos", value: "57%", bar: 0.57 },

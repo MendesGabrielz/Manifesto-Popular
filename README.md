@@ -31,8 +31,11 @@ A pessoa digita o próprio salário e descobre:
 - quantos anos precisaria trabalhar, sem gastar nada, para juntar o que a fortuna do brasileiro mais rico cresce em um único dia;
 - como uma dívida de R$ 1.000 no cartão dobra em cinco meses.
 
+### Mas e…?
+As objeções que todo mundo já ouviu ("o Estado não tem dinheiro", "gasto gera inflação", "estatal é ineficiente", "olha a Petrobras", "vai virar a Venezuela", "taxar os ricos espanta investimento") respondidas com número e fonte. Cada resposta traz também o que o outro lado tem de razão.
+
 ### A Luta
-Uma linha do tempo que a pessoa percorre de lado: a Revolução de 1917, o crash de 1929, o nascimento da saúde pública universal, o petróleo é nosso, a Constituição Cidadã e o SUS, e a crise de 2008. Entre os marcos, dados da Oxfam sobre a desigualdade global.
+Uma linha do tempo que a pessoa percorre de lado: a Revolução de 1917, o crash de 1929, a fome soviética de 1932 (um lembrete de que Estado forte sem democracia é poder contra o povo), o nascimento da saúde pública universal, o petróleo é nosso, a Constituição Cidadã e o SUS, e a crise de 2008. Entre os marcos, dados da Oxfam sobre a desigualdade global.
 
 ### Os Símbolos da Luta
 A foice e o martelo, a estrela vermelha e o punho erguido. Cada um abre uma página com a origem histórica do símbolo, linha do tempo e citações.
@@ -55,7 +58,7 @@ Criticar não basta. Em páginas próprias (`/projeto`), o site apresenta propos
 4. Política Externa e Soberania Nacional
 5. Democracia e Fortalecimento Institucional
 
-Cada eixo segue a mesma estrutura: diagnóstico, objetivos, propostas, implementação, viabilidade econômica, prazos, indicadores, riscos e referências. Nenhum número entra sem fonte, e quando não há base para uma meta, o texto diz que ela depende de estudos técnicos.
+Cada eixo segue a mesma estrutura: diagnóstico, objetivos, propostas, implementação, viabilidade econômica, prazos, indicadores, riscos e referências. A página principal do projeto reúne **a conta**: quanto cada eixo custa e de onde o dinheiro pode vir, inclusive as fontes que já estão comprometidas. Nenhum número entra sem fonte, e quando não há base para uma meta, o texto diz que ela depende de estudos técnicos.
 
 Os cinco eixos estão publicados. Novos eixos podem entrar como "em construção" até passarem por pesquisa e revisão.
 

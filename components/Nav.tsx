@@ -4,6 +4,7 @@ import { RedStar } from "./Symbols";
 const links = [
   { href: "/#manifesto", label: "Manifesto" },
   { href: "/#fatura", label: "A Fatura" },
+  { href: "/#objecoes", label: "Mas e…?" },
   { href: "/#luta", label: "A Luta" },
   { href: "/#simbolos", label: "Símbolos" },
   { href: "/projeto", label: "Projeto de País" },
