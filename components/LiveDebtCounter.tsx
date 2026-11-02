@@ -106,7 +106,10 @@ export default function LiveDebtCounter() {
         <p className="mt-6 max-w-3xl text-xs leading-relaxed text-paper/45">
           Base de cálculo: cerca de R$ 1 trilhão por ano em juros nominais da dívida pública
           (Banco Central do Brasil, Estatísticas Fiscais: R$ 1,0076 trilhão em 2025, setor
-          público consolidado), dividido pelos segundos do ano.
+          público consolidado), dividido pelos segundos do ano. É a despesa de juros
+          registrada no ano, e não o pagamento em dinheiro dia a dia. Quem recebe são os credores
+          da dívida: bancos, fundos de investimento e de previdência, investidores estrangeiros e
+          pessoas que compram títulos públicos.
         </p>
       </div>
     </section>

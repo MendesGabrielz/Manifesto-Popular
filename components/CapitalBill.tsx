@@ -53,7 +53,7 @@ const BILLS: Bill[] = [
     Icon: Landmark,
     theme: "paper",
     stat: { value: 438, suffix: "%", label: "de juros ao ano no rotativo do cartão (dez/2025)" },
-    text: "Só quatro bancos — Banco do Brasil, Caixa, Itaú e Bradesco — concentram 57% de todo o crédito do país. Enquanto você paga 438% de juros ao ano no rotativo do cartão, o Itaú fechou 2025 com R$ 46,8 bilhões de lucro, o maior da história dos bancos brasileiros.",
+    text: "Só quatro bancos — Banco do Brasil, Caixa, Itaú e Bradesco — concentram 57% de todo o crédito do país. Enquanto você paga 438% de juros ao ano no rotativo do cartão, o Itaú fechou 2025 com R$ 46,8 bilhões de lucro, o maior da história dos bancos brasileiros em valores corrigidos pela inflação.",
     items: [
       { desc: "Juros do rotativo do cartão (a.a.)", value: "438%", bar: 1 },
       { desc: "Crédito nas mãos de 4 bancos", value: "57%", bar: 0.57 },
@@ -86,7 +86,7 @@ const BILLS: Bill[] = [
     Icon: UtensilsCrossed,
     theme: "blood",
     stat: { value: 33.1, decimals: 1, suffix: " mi", label: "de brasileiros passando fome em 2022" },
-    text: "Na pandemia, a fortuna dos bilionários brasileiros cresceu 30% — US$ 39,6 bilhões a mais —, enquanto em 2022 a fome chegou a 33,1 milhões de brasileiros (Rede Penssan). A fome recuou com políticas públicas, mas 6,4 milhões ainda viviam em insegurança alimentar grave em 2024 (IBGE).",
+    text: "Na pandemia, a fortuna dos bilionários brasileiros cresceu 30% — US$ 39,6 bilhões a mais —, enquanto em 2022 a fome chegou a 33,1 milhões de brasileiros (Rede Penssan). Desde então a fome recuou, mas 6,4 milhões ainda viviam em insegurança alimentar grave em 2024 (IBGE).",
     items: [
       { desc: "Fortuna dos bilionários na pandemia", value: "+30%", bar: 0.3 },
       { desc: "Fome em 2022 (Rede Penssan)", value: "33,1 mi", bar: 1 },
@@ -106,11 +106,11 @@ const BILLS: Bill[] = [
     items: [
       { desc: "Juros nominais do setor público, 2025", value: "R$ 1 tri", bar: 1 },
       { desc: "Juros nominais do setor público, 2024", value: "R$ 950 bi", bar: 0.94 },
-      { desc: "Juro real brasileiro", value: "Top do mundo", bar: 0.8 },
+      { desc: "Juro real brasileiro", value: "1º ou 2º do mundo", bar: 0.8 },
     ],
     total: "O orçamento",
     stamp: "Socializado",
-    source: "Banco Central do Brasil — Estatísticas Fiscais, juros nominais do setor público consolidado (2024 e 2025)",
+    source: "Banco Central do Brasil — Estatísticas Fiscais, juros nominais do setor público consolidado (2024 e 2025); ranking de juros reais MoneYou / Lev Intelligence (2026)",
   },
 ];
 

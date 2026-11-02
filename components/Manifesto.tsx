@@ -9,8 +9,8 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 // Cada item é uma "linha" com máscara própria. `em` destaca em vermelho.
 const LINES: { text: string; em?: boolean }[] = [
-  { text: "Enquanto a produtividade cresce," },
-  { text: "os salários ficam para trás." },
+  { text: "Enquanto a riqueza nova vai para o topo," },
+  { text: "quem trabalha fica com as sobras." },
   { text: "A riqueza não evapora:", em: true },
   { text: "ela sobe, se acumula e se esconde" },
   { text: "em juros, dividendos e paraísos fiscais." },
@@ -23,7 +23,7 @@ const LINES: { text: string; em?: boolean }[] = [
 ];
 
 const PILLARS = [
-  { n: "01", title: "Taxar grandes fortunas", body: "Progressividade real: quem tem mais, contribui mais. Fim da isenção sobre lucros e dividendos." },
+  { n: "01", title: "Taxar grandes fortunas", body: "Quem tem mais, contribui mais. O imposto sobre grandes fortunas está na Constituição desde 1988 e nunca foi regulamentado. A taxação de dividendos aprovada em 2025 é um começo, não o fim." },
   { n: "02", title: "Bancos públicos fortes", body: "Crédito barato para quem produz, não para quem especula. Juros como instrumento de desenvolvimento." },
   { n: "03", title: "Setores estratégicos", body: "Energia, água, saúde e infraestrutura são bens comuns, não ativos para o rentismo." },
 ];

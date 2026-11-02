@@ -32,7 +32,7 @@ export const STORIES: SymbolStory[] = [
       },
       {
         title: "Na bandeira vermelha",
-        body: "Com a fundação da União Soviética, no fim de 1922, o símbolo dourado sob uma estrela passa a ocupar o canto da bandeira vermelha. Ao longo do século XX, ele viraria uma das imagens políticas mais reconhecidas do planeta.",
+        body: "Com a fundação da União Soviética, no fim de 1922, o símbolo dourado sob uma estrela passa a ocupar o canto da bandeira vermelha adotada no ano seguinte. Ao longo do século XX, ele viraria uma das imagens políticas mais reconhecidas do planeta.",
       },
       {
         title: "O sentido hoje",

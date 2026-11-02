@@ -74,6 +74,8 @@ Crítica forte exige número certo. Todo dado do site foi checado em fonte públ
 
 Quando um dado envelhece, ele é atualizado, e não esticado para caber no discurso.
 
+A última auditoria completa de fontes e afirmações, com o registro das correções, está em [`docs/auditoria-2026-11.md`](docs/auditoria-2026-11.md).
+
 ---
 
 ## Feito com

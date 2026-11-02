@@ -283,7 +283,7 @@ const EDU: AxisContent = {
     { value: "73%", label: "dos estudantes abaixo do nível básico em matemática (PISA 2022)", source: "OCDE / INEP" },
     { value: "59,2%", label: "das crianças alfabetizadas ao fim do 2º ano (2024)", source: "INEP / MEC, Indicador Criança Alfabetizada" },
     { value: "R$ 5,1 mil", label: "piso salarial do professor, 40 horas (2026)", source: "MEC" },
-    { value: "~5,5%", label: "do PIB em educação pública (estimativa usada no debate do novo PNE)", source: "Congresso Nacional, PL 2.614/2024" },
+    { value: "~5,5%", label: "do PIB em educação pública (estimativa usada no debate do novo PNE)", source: "Estimativa citada na tramitação do novo PNE (Lei 15.388/2026)" },
     { value: "1,19%", label: "do PIB em pesquisa e desenvolvimento (2023)", source: "MCTI / CNI" },
     { value: "R$ 23 bi", label: "previstos no Plano Brasileiro de IA para 2024–2028", source: "MCTI / Agência Gov" },
   ],
@@ -293,7 +293,7 @@ const EDU: AxisContent = {
     items: [
       { label: "Crianças alfabetizadas ao fim do 2º ano", current: 59.2, target: 80, currentLabel: "59,2%", targetLabel: "80% em 2030", note: "INEP / MEC, Compromisso Nacional Criança Alfabetizada" },
       { label: "Estudantes no nível básico ou acima em matemática (PISA)", current: 27, target: 69, currentLabel: "27%", targetLabel: "média da OCDE (~69%)", note: "OCDE, PISA 2022" },
-      { label: "Gasto público em educação (% do PIB, escala até 10%)", current: 55, target: 100, currentLabel: "~5,5%", targetLabel: "10% ao fim do novo PNE", note: "PL 2.614/2024 (novo PNE)" },
+      { label: "Gasto público em educação (% do PIB, escala até 10%)", current: 55, target: 100, currentLabel: "~5,5%", targetLabel: "10% ao fim do novo PNE", note: "Lei 15.388/2026 (novo PNE)" },
       { label: "Pesquisa e desenvolvimento (% do PIB, escala até 5%)", current: (1.19 / 5) * 100, target: (2.1 / 5) * 100, currentLabel: "1,19%", targetLabel: "2,1% (China, 2018)", note: "MCTI; indicadores internacionais do MCTIC" },
     ],
   },
@@ -435,7 +435,7 @@ const EDU: AxisContent = {
   indicators: [
     { name: "Crianças alfabetizadas ao fim do 2º ano", current: "59,2% (2024)", target: "80% em 2030", source: "INEP / MEC, Indicador Criança Alfabetizada" },
     { name: "Estudantes abaixo do nível básico em matemática", current: "73% (PISA 2022)", target: "Meta a definir no novo PNE; média da OCDE: ~31%", source: "OCDE / INEP" },
-    { name: "Gasto público em educação", current: "~5,5% do PIB (estimativa)", target: "7,5% em 7 anos; 10% ao fim do PNE", source: "PL 2.614/2024 (novo PNE)" },
+    { name: "Gasto público em educação", current: "~5,5% do PIB (estimativa)", target: "7,5% em 7 anos; 10% ao fim do PNE", source: "Lei 15.388/2026 (novo PNE)" },
     { name: "Ensino médio com educação profissional", current: "13% a 22% (2024, conforme o critério)", target: "Depende de estudos e das metas do novo PNE", source: "Censo Escolar 2024, INEP / MEC" },
     { name: "Remuneração do professor frente a outros profissionais com a mesma escolaridade", current: "Abaixo (meta do PNE anterior não cumprida)", target: "Equiparação", source: "Observatório do PNE; Fineduca" },
     { name: "Investimento em pesquisa e desenvolvimento", current: "1,19% do PIB (2023)", target: "Acima de 2%, a ser fixado em plano de CT&I", source: "MCTI; CNI" },
@@ -471,6 +471,7 @@ const EDU: AxisContent = {
     { title: "Emenda Constitucional 108/2020 (novo Fundeb)", source: "Presidência da República", year: "2020", url: "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc108.htm" },
     { title: "Lei 11.738/2008, Piso Salarial Profissional Nacional do Magistério", source: "Presidência da República", year: "2008", url: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11738.htm" },
     { title: "Lei 14.945/2024, reforma do ensino médio", source: "Presidência da República", year: "2024", url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14945.htm" },
+    { title: "Lei 15.388/2026, Plano Nacional de Educação 2026–2036", source: "Presidência da República", year: "2026", url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15388.htm" },
     { title: "Lei Complementar 177/2021 (FNDCT)", source: "Presidência da República", year: "2021", url: "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp177.htm" },
     { title: "Lei 13.243/2016, Marco Legal de Ciência, Tecnologia e Inovação", source: "Presidência da República", year: "2016", url: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13243.htm" },
     { title: "Lei 12.858/2013, royalties do petróleo para educação e saúde", source: "Presidência da República", year: "2013", url: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12858.htm" },
@@ -908,14 +909,14 @@ const DEM: AxisContent = {
 const EXT: AxisContent = {
   diagnosis: [
     "O mundo voltou a ser disputado entre grandes potências, e países médios como o Brasil são pressionados a escolher um lado. A tradição diplomática brasileira, de dialogar com todos e não se alinhar automaticamente a ninguém, ganhou valor, mas só funciona se o país tiver economia forte, diplomacia competente e projeto próprio.",
-    "O comércio exterior está concentrado. Em 2025, o Brasil exportou US$ 348,3 bilhões, recorde histórico, mas a China comprou 28,7% de tudo e os Estados Unidos 10,8%. A América do Sul inteira ficou com 12,4%, e o Mercosul com 7,5%.",
+    "O comércio exterior está concentrado. Em 2025, o Brasil exportou US$ 348,3 bilhões, recorde histórico, mas a China comprou 28,7% de tudo e os Estados Unidos 10,8%. Os parceiros do Mercosul ficaram com 7,5%.",
     "A dependência tem custo. Em agosto de 2025, os Estados Unidos impuseram tarifa de 50% a produtos brasileiros como café, carnes e frutas, com cerca de 700 exceções, numa decisão que o governo americano justificou também com questões da política interna brasileira. A disputa seguiu em 2026. A lição é clara: quem depende de poucos compradores fica vulnerável a pressões.",
     "Há oportunidades abertas. O acordo entre Mercosul e União Europeia foi assinado em janeiro de 2026, depois de mais de 25 anos de negociação, mas o Parlamento Europeu enviou o texto ao Tribunal de Justiça da União Europeia, o que pode atrasar a vigência. Em 2025, o Brasil sediou a COP30, em Belém, onde lançou um fundo para pagar países que mantêm florestas tropicais em pé.",
     "Na defesa, o Brasil gastou cerca de 1,1% do PIB em 2025, segundo o SIPRI, menos da metade da média mundial de 2,5%. Análises especializadas apontam que a maior parte desse orçamento vai para pessoal, sobrando pouco para equipamento e tecnologia.",
   ],
   keyNumbers: [
     { value: "28,7%", label: "das exportações foram para a China em 2025", source: "MDIC / Secex" },
-    { value: "12,4%", label: "das exportações foram para a América do Sul em 2025", source: "MDIC / Secex" },
+    { value: "7,5%", label: "das exportações foram para o Mercosul em 2025 (cerca de US$ 26 bi)", source: "Presidência da República" },
     { value: "50%", label: "de tarifa dos EUA sobre parte dos produtos brasileiros, a partir de ago/2025", source: "Governo dos EUA; MDIC" },
     { value: "25 anos", label: "de negociação até a assinatura do acordo Mercosul–UE, em 2026", source: "Conselho da UE; Itamaraty" },
     { value: "1,1%", label: "do PIB gastos com defesa em 2025 (média mundial: 2,5%)", source: "SIPRI" },
@@ -1059,7 +1060,7 @@ const EXT: AxisContent = {
   ],
   indicators: [
     { name: "Peso do maior comprador nas exportações", current: "China: 28,7% (2025)", target: "Reduzir a concentração; meta depende de estudos", source: "MDIC / Secex" },
-    { name: "Exportações para a América do Sul", current: "12,4% do total (2025)", target: "Ampliar; meta depende de estudos", source: "MDIC / Secex" },
+    { name: "Exportações para o Mercosul", current: "7,5% do total (2025)", target: "Ampliar; meta depende de estudos", source: "Presidência da República" },
     { name: "Barreiras contra produtos brasileiros", current: "Tarifa de 50% dos EUA sobre parte das exportações (desde 2025)", target: "Remoção por negociação ou contencioso", source: "MDIC; governo dos EUA" },
     { name: "Acordo Mercosul–União Europeia", current: "Assinado em 2026; vigência depende do lado europeu", target: "Em vigor, com medidas de transição para setores afetados", source: "Conselho da UE; Parlamento Europeu; Itamaraty" },
     { name: "Gasto com defesa", current: "1,1% do PIB (2025)", target: "Depende da Estratégia Nacional de Defesa; média mundial: 2,5%", source: "SIPRI" },
@@ -1095,7 +1096,6 @@ const EXT: AxisContent = {
     { title: "Constituição da República Federativa do Brasil (arts. 4º, 21, 49 e 84)", source: "Presidência da República", year: "1988", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" },
     { title: "Lei 15.122/2025, Lei da Reciprocidade Econômica", source: "Presidência da República", year: "2025", url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15122.htm" },
     { title: "Brasil tem superávit comercial de US$ 68,3 bi em 2025 (dados MDIC / Secex)", source: "Forbes Brasil", year: "2026", url: "https://forbes.com.br/forbes-money/2026/01/brasil-tem-superavit-comercial-de-us-683-bi-em-2025/" },
-    { title: "O que o Brasil exporta (dados MDIC / Secex de 2025)", source: "DHL", year: "2026", url: "https://www.dhl.com/discover/pt-br/conselhos-de-logistica/o-que-o-brasil-exporta" },
     { title: "Lula participa da cúpula do Mercosul no Paraguai (exportações ao bloco em 2025)", source: "Correio da Manhã", year: "2026", url: "https://www.correiodamanha.com.br/politica/2026/06/297925-lula-participa-da-cupula-do-mercosul-no-paraguai-nesta-terca.html" },
     { title: "Trump assina ordem que confirma tarifas de 50% contra o Brasil, mas abre exceções", source: "Bloomberg Línea", year: "2025", url: "https://www.bloomberglinea.com.br/internacional/trump-cita-ameaca-do-governo-brasileiro-e-implementa-tarifas-de-50-contra-o-pais/" },
     { title: "Trump confirma taxação de 50%, mas com exceção a quase 700 produtos", source: "Correio da Manhã", year: "2025", url: "https://www.correiodamanha.com.br/politica/2025/07/212827-trump-confirma-taxacao-de-50-mas-com-excecao-a-quase-700-produtos.html" },

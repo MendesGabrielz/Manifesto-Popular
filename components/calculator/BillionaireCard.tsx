@@ -55,7 +55,8 @@ export default function BillionaireCard({ salary }: { salary: number }) {
 
       <footer className="border-t-2 border-ink pt-3 text-[11px] leading-snug text-ink/60">
         Base: a fortuna de {RICHEST.name} chegou a R$ 227 bilhões, alta de 45,5% em um ano — cerca
-        de {brlCompact.format(RICHEST_DAILY_GAIN)} por dia. Fonte: {RICHEST.source}.
+        de {brlCompact.format(RICHEST_DAILY_GAIN)} por dia. Fonte: {RICHEST.source}. É
+        variação de patrimônio, puxada pela alta das ações da Meta, e não renda do trabalho.
       </footer>
     </article>
   );
