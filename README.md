@@ -45,6 +45,22 @@ O chamado final. Ninguém liberta ninguém sozinho.
 
 ---
 
+## Projeto de País
+
+Criticar não basta. Em páginas próprias (`/projeto`), o site apresenta propostas para o Brasil em cinco eixos:
+
+1. Educação, Ciência e Tecnologia
+2. Industrialização e Desenvolvimento Econômico
+3. Infraestrutura e Desenvolvimento Territorial
+4. Política Externa e Soberania Nacional
+5. Democracia e Fortalecimento Institucional
+
+Cada eixo segue a mesma estrutura: diagnóstico, objetivos, propostas, implementação, viabilidade econômica, prazos, indicadores, riscos e referências. Nenhum número entra sem fonte, e quando não há base para uma meta, o texto diz que ela depende de estudos técnicos.
+
+O eixo de **Infraestrutura** é o primeiro publicado. Os demais aparecem como "em construção" até passarem por pesquisa e revisão.
+
+---
+
 ## Compromisso com os dados
 
 Crítica forte exige número certo. Todo dado do site foi checado em fonte pública e traz a fonte junto:

@@ -37,18 +37,23 @@ export default function SmoothScroll({
     gsap.ticker.add(raf);
     gsap.ticker.lagSmoothing(0);
 
-    // Links âncora (#manifesto etc.) passam pelo Lenis
+    // Links âncora passam pelo Lenis: "#parte" sempre e "/#secao" quando já
+    // estamos na home (nas outras páginas eles navegam normalmente até a home)
     const onClick = (e: MouseEvent) => {
       const link = (e.target as HTMLElement).closest<HTMLAnchorElement>(
-        'a[href^="#"]'
+        'a[href^="#"], a[href^="/#"]'
       );
       if (!link) return;
-      const id = link.getAttribute("href");
-      if (!id || id === "#") return;
+      const href = link.getAttribute("href")!;
+      if (href.startsWith("/#") && window.location.pathname !== "/") return;
+      const id = href.replace(/^\//, "");
+      if (id === "#") return;
       const target = document.querySelector<HTMLElement>(id);
       if (!target) return;
       e.preventDefault();
-      lenis.scrollTo(target, { offset: 0 });
+      // Respeita o scroll-margin-top da seção (espaço do menu fixo)
+      const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+      lenis.scrollTo(target, { offset: -margin });
     };
     document.addEventListener("click", onClick);
 

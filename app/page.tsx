@@ -7,6 +7,7 @@ import CapitalBill from "@/components/CapitalBill";
 import LiveDebtCounter from "@/components/LiveDebtCounter";
 import InequalityCalculator from "@/components/InequalityCalculator";
 import PrivatizationAnalysis from "@/components/PrivatizationAnalysis";
+import ProjetoTeaser from "@/components/ProjetoTeaser";
 import SymbolsGrid from "@/components/SymbolsGrid";
 import PosterGenerator from "@/components/PosterGenerator";
 import CallToAction from "@/components/CallToAction";
@@ -22,6 +23,7 @@ export default function Home() {
         <LiveDebtCounter />
         <InequalityCalculator />
         <PrivatizationAnalysis />
+        <ProjetoTeaser />
         <div className="relative z-10 py-10">
           <Marquee words={["O ESTADO É O POVO", "TAXAR OS SUPER-RICOS"]} />
           <Marquee words={["SAÚDE PÚBLICA", "BANCO PÚBLICO", "SOBERANIA"]} reverse />
