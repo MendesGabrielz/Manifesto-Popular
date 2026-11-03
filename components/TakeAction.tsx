@@ -10,7 +10,7 @@ import { BREAKPOINTS, type Conditions } from "@/lib/motion";
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const SITE_URL = "https://manifestopopular.vercel.app/";
-const SHARE_TEXT = "O mercado falhou. O Estado é o povo. Conheça o Manifesto Popular:";
+const SHARE_TEXT = "O mercado falhou. O Estado é o povo. Conheça o Movimento Popular:";
 const CHANNEL_URL = "https://whatsapp.com/channel/0029Vb9vd7sAu3aYmf9VDv0A";
 
 type Step = {
@@ -33,7 +33,7 @@ const STEPS: Step[] = [
   },
   {
     title: "Entre no canal",
-    body: "Receba os novos materiais, dados e chamados do Manifesto Popular direto no WhatsApp.",
+    body: "Receba os novos materiais, dados e chamados do Movimento Popular direto no WhatsApp.",
     link: { href: CHANNEL_URL, label: "Seguir o canal", external: true },
   },
   {
@@ -48,7 +48,7 @@ function ShareButtons() {
   const share = async () => {
     if (navigator.share) {
       try {
-        await navigator.share({ title: "Manifesto Popular", text: SHARE_TEXT, url: SITE_URL });
+        await navigator.share({ title: "Movimento Popular", text: SHARE_TEXT, url: SITE_URL });
       } catch {
         // A pessoa fechou a janela de compartilhamento
       }

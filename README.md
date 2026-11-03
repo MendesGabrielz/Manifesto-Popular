@@ -1,8 +1,8 @@
-# Manifesto Popular
+# Movimento Popular
 
 **O mercado falhou. O Estado é o povo.**
 
-Manifesto Popular é um site-manifesto em defesa de um Estado forte e contra a concentração de riqueza imposta pelo capital financeiro. Ele junta crítica política, dados públicos verificáveis e linguagem visual de cartaz para mostrar quem paga a conta do sistema e quem lucra com ela.
+Movimento Popular é um site-manifesto em defesa de um Estado forte e contra a concentração de riqueza imposta pelo capital financeiro. Ele junta crítica política, dados públicos verificáveis e linguagem visual de cartaz para mostrar quem paga a conta do sistema e quem lucra com ela.
 
 O visual é **neo-construtivista**: preto, vermelho e branco, tipografia gigante, linhas duras e imagens em preto e branco que viram vermelho ao toque. É uma releitura digital dos cartazes de vanguarda do início do século XX.
 

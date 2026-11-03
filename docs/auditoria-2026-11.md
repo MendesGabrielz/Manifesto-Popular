@@ -1,4 +1,4 @@
-# Auditoria de fontes e afirmações — Manifesto Popular
+# Auditoria de fontes e afirmações — Movimento Popular
 
 **Data:** 2 de novembro de 2026
 **Escopo:** todo o conteúdo do site (página inicial, linha do tempo, símbolos, calculadora, contador, Raio-X das Privatizações e os cinco eixos do Projeto de País).
