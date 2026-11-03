@@ -6,7 +6,7 @@ import AxisCard from "@/components/projeto/AxisCard";
 import { AXES, AXIS_PARTS } from "@/lib/projeto";
 
 export const metadata: Metadata = {
-  title: "Projeto de País — Movimento Popular",
+  title: "Projeto de País — Movimento Popular BR",
   description:
     "Propostas estruturadas para o desenvolvimento do Brasil em cinco eixos, com diagnóstico, custos, prazos, indicadores, riscos e fontes.",
 };
@@ -26,7 +26,7 @@ export default function ProjetoPage() {
             <div className="relative mx-auto max-w-[1600px]">
               <p data-reveal className="mb-6 flex items-center gap-4 font-grotesk text-xs uppercase tracking-[0.4em] text-red-600">
                 <span className="h-px w-12 bg-red-600" />
-                Movimento Popular
+                Movimento Popular BR
               </p>
               <h1 data-reveal className="font-display text-[clamp(4rem,15vw,13rem)] leading-[0.82]">
                 Projeto <span className="text-outline">de</span> País

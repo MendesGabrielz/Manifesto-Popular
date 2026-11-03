@@ -10,7 +10,7 @@ import { HammerSickle, RaisedFist, RedStar } from "./Symbols";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-// Canal de WhatsApp do Movimento Popular
+// Canal de WhatsApp do Movimento Popular BR
 const COLLECTIVE_URL = "https://whatsapp.com/channel/0029Vb9vd7sAu3aYmf9VDv0A";
 const READING_URL = "https://www.marxists.org/portugues/";
 
