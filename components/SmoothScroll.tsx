@@ -37,6 +37,19 @@ export default function SmoothScroll({
     gsap.ticker.add(raf);
     gsap.ticker.lagSmoothing(0);
 
+    // A altura da página muda depois do carregamento (acordeões, imagens,
+    // calculadora). Sem recalcular, as seções fixadas travam na posição antiga.
+    let lastHeight = document.body.scrollHeight;
+    let refreshTimer: ReturnType<typeof setTimeout>;
+    const heightObserver = new ResizeObserver(() => {
+      const height = document.body.scrollHeight;
+      if (height === lastHeight) return;
+      lastHeight = height;
+      clearTimeout(refreshTimer);
+      refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 200);
+    });
+    heightObserver.observe(document.body);
+
     // Links âncora passam pelo Lenis: "#parte" sempre e "/#secao" quando já
     // estamos na home (nas outras páginas eles navegam normalmente até a home)
     const onClick = (e: MouseEvent) => {
@@ -59,6 +72,8 @@ export default function SmoothScroll({
 
     return () => {
       document.removeEventListener("click", onClick);
+      heightObserver.disconnect();
+      clearTimeout(refreshTimer);
       gsap.ticker.remove(raf);
       setLenis(null);
       lenis.destroy();
