@@ -185,12 +185,25 @@ function animateBill(
   const obj = { v: bill.stat.from ?? 0 };
   statEl.textContent = formatStat(obj.v, bill.stat);
 
+  // A contagem só acontece uma vez, descendo. Quem sobe para reler encontra
+  // o valor real parado, mesmo que tenha voltado no meio da contagem.
+  const direction = bill.stat.value >= obj.v ? 1 : -1;
+  let shown = obj.v;
+  let locked = false;
+
   // Contador: rola junto com o scroll (scrub), não por tempo
   gsap.to(obj, {
     v: bill.stat.value,
     ease: "power1.out",
     onUpdate: () => {
-      statEl.textContent = formatStat(obj.v, bill.stat);
+      if (locked) return;
+      if ((obj.v - shown) * direction < 0 || obj.v === bill.stat.value) {
+        locked = true;
+        statEl.textContent = formatStat(bill.stat.value, bill.stat);
+        return;
+      }
+      shown = obj.v;
+      statEl.textContent = formatStat(shown, bill.stat);
     },
     scrollTrigger: { ...st("start-counter", "end-counter"), scrub: true },
   });
